@@ -1,0 +1,59 @@
+{% load static %}
+
+<header id="header" class="header header-transparent">
+    <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-light">
+          <!-- logo-->
+          <a class="navbar-brand d-flex align-items-center" href="{% url 'gestiondepartement:home' %}" style="display: flex; align-items: center;">
+            <img src="{% static 'gestioncolloque/assets/enset.png' %}" alt="" style="height: 90px; width: auto; margin-right: 5px;">
+            <div class="vertical-text" style="display: flex; flex-direction: column; justify-content: center; height: 90%;">
+               <span style="font-size: 14px; font-weight: bold; margin: 1px 0; color: #fff;">Département</span>
+               <span style="font-size: 14px; font-weight: bold; margin: 1px 0; color: #fff;">des Sciences</span>
+               <span style="font-size: 14px; font-weight: bold; margin: 1px 0; color: #fff;">de l'Éducation</span>
+            </div>
+         </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                   <a href="{% url 'gestioncolloque:index' %}" class="" >Aperçu</a>
+                </li>
+                <li class="dropdown nav-item">
+                   <a href="#" class="" data-toggle="dropdown">INFOS UTILES <i class="fa fa-angle-down"></i></a>
+                   <ul class="dropdown-menu" role="menu">
+                      <li><a href="{% url 'gestioncolloque:about' %}">A Propos</a></li>
+                      <li><a href="{% url 'gestioncolloque:gallery' %}">Galerie</a></li>
+                      <li><a href="{% url 'gestioncolloque:faq' %}">FAQ</a></li>
+                      <li><a href="{% url 'gestioncolloque:pricing' %}">Frais d'Enregistrement</a></li>
+                      <li><a href="{% url 'gestioncolloque:sponsors' %}">Sponsors</a></li>
+                      <li><a href="{% url 'gestioncolloque:venue' %}">Lieu</a></li>
+                   </ul>
+                </li>
+                <li class="nav-item">
+                   <a href="{% url 'gestioncolloque:speakers' %}" class="">Conférenciers</a>
+                </li>
+                <li class="nav-item">
+                   <a href="{% url 'gestioncolloque:schedule' %}" class="">Programme</a>
+                </li>
+                {% comment %} <li class="nav-item dropdown">
+                   <a href="#"> Blog <i class="fa fa-angle-down"></i></a>
+                   <ul class="dropdown-menu" role="menu">
+                      <li><a href="{% url 'gestioncolloque:blog' %}">Blog</a></li>
+                      <li><a href="{% url 'gestioncolloque:blog_detail' %}">Blog Details</a></li>
+                   </ul>
+                </li> {% endcomment %}
+                <li class="nav-item">
+                   <a href="{% url 'gestioncolloque:contact' %}">Contact</a>
+                </li>
+                <li class="header-ticket nav-item">
+                   <a class="ticket-btn btn" href="{% url 'gestioncolloque:pricing' %}"> INSCRIPTION
+                   </a>
+                </li>
+             </ul>
+          </div>
+       </nav>
+    </div><!-- container end-->
+ </header>

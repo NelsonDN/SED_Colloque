@@ -1,0 +1,196 @@
+{% extends "gestioncolloque/layouts/app.html" %}
+
+{% block title %}
+Lieu du colloque
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<div id="page-banner-area" class="page-banner-area" style="background-image:url({% static 'gestioncolloque/assets/leanr_bg.png' %})">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+       <div class="text-center">
+          <h2>Lieu du Colloque</h2>
+          <ol class="breadcrumb">
+             <li>
+                <a href="#">Accueil /</a>
+             </li>
+             <li>
+                   Lieu
+             </li>
+          </ol>
+       </div>
+    </div><!-- Subpage title end -->
+ </div><!-- Page Banner end -->
+
+<!-- ts intro start -->
+<section class="ts-intro-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="column-title">
+                    <span>Amphi 300</span>
+                    Université de Douala, ENSET
+                </h2>
+                <div class="intro-content-text">
+                    <p>
+                        L'événement s'engage à garantir une expérience sans harcèlement pour tous, indépendamment du niveau d'expérience, du genre, de l'identité de genre et de l'expression.
+                    </p>
+                    <a href="#">www.universitedouala.com</a>
+                </div><!-- single intro text end-->
+            </div><!-- col end-->
+            <div class="col-lg-6">
+                <div class="intro-content-img">
+                    <img src="{% static 'gestioncolloque/assets/amphi.jpg' %}" alt="">
+                </div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end-->
+</section>
+<!-- ts intro end-->
+
+
+
+<section class="ts-venue-feature gradient">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title white">
+                    <span>Informations de Séjour</span>
+                    Autres Installations
+                </h2>
+            </div><!-- col end-->
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-venue-content text-center">
+                    <i class="icon-cycle"></i>
+                    <h3 class="ts-venue-title">Transport</h3>
+                    <p>
+                        Des options de transport sont disponibles pour assurer un accès facile à l'événement, y compris des services de navette depuis l'aéroport et les stations de transport en commun.
+                    </p>
+                    <a href="#" class="btn-link-box">En Savoir Plus</a>
+                </div>
+            </div><!-- Col end -->
+            <div class="col-lg-4">
+                <div class="single-venue-content text-center">
+                    <i class="icon-hotel"></i>
+                    <h3 class="ts-venue-title">Hébergement</h3>
+                    <p>
+                        Des options d'hébergement variées sont disponibles à proximité du site de la conférence pour répondre à tous les budgets et préférences.
+                    </p>
+                    <a href="#" class="btn-link-box">En Savoir Plus</a>
+                </div>
+            </div><!-- Col end -->
+            <div class="col-lg-4">
+                <div class="single-venue-content text-center">
+                    <i class="icon-food"></i>
+                    <h3 class="ts-venue-title">Repas Sains</h3>
+                    <p>
+                        Des options de repas sains et équilibrés seront proposées durant l'événement, avec des choix adaptés aux régimes alimentaires variés.
+                    </p>
+                    <a href="#" class="btn-link-box">En Savoir Plus</a>
+                </div>
+            </div><!-- Col end -->
+        </div>
+    </div>
+</section>
+
+ <!--- Venue Feature -->
+
+ <section class="ts-map-direction wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h2 class="column-title">
+                    <span>Nous rejoindre</span>
+                    Obtenez des indications pour vous rendre
+                    à la salle de l'événement
+                </h2>
+
+                <div class="ts-map-tabs">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#venue" role="tab" data-toggle="tab">Lieu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#time" role="tab" data-toggle="tab">Horaire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how-to-get-there" role="tab" data-toggle="tab">Comment y accéder</a>
+                        </li>
+                    </ul>
+
+                    <!-- Contenu des onglets -->
+                    <div class="tab-content direction-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="venue">
+                            <div class="direction-tabs-content">
+                                <h3>Université de Douala, ENSET</h3>
+                                <p class="derecttion-vanue" style="color: white;">
+                                    Campus ENSET, Logbessou<br/>
+                                    Douala, Cameroun
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="contact-info-box">
+                                            <h3>Informations sur les billets</h3>
+                                            <p><strong>Nom :</strong> OWONA Eric Augustin</p>
+                                            <p><strong>Téléphone :</strong> (+237) 699520051 / 651572500</p>
+                                            {% comment %} <p><strong>Email :</strong> <a href="mailto:colloqueafe32@gmail.com" style="color: white;">colloqueafe32@gmail.com</a></p> {% endcomment %}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contact-info-box">
+                                            <h3>Détails du programme</h3>
+                                            <p><strong>Nom :</strong> OWONA Eric Augustin</p>
+                                            <p><strong>Téléphone :</strong> (+237) 699520051 / 651572500</p>
+                                            {% comment %} <p><strong>Email :</strong> <a href="mailto:colloqueafe32@gmail.com" style="color: white;">colloqueafe32@gmail.com</a></p> {% endcomment %}
+                                        </div>
+                                    </div>
+                                </div><!-- Fin de la rangée -->
+                            </div><!-- direction tabs end-->
+                        </div><!-- tab pane end-->
+
+                        <div role="tabpanel" class="tab-pane fade" id="time">
+                            <div class="direction-tabs-content">
+                                <h3>Horaire de l'événement</h3>
+                                <p class="derecttion-vanue">
+                                    Du 23 au 25 octobre 2024<br/>
+                                    De 9h00 à 17h00 chaque jour
+                                </p>
+                            </div><!-- direction tabs end-->
+                        </div><!-- tab pane end-->
+
+                        <div role="tabpanel" class="tab-pane fade" id="how-to-get-there">
+                            <div class="direction-tabs-content">
+                                <h3>Comment se rendre à l'ENSET</h3>
+                                <p class="derecttion-vanue">
+                                    Utilisez les transports en commun jusqu'à l'arrêt "ENSET" ou suivez les panneaux indiquant l'Université de Douala, Campus ENSET.
+                                </p>
+                            </div><!-- direction tabs end-->
+                        </div><!-- tab pane end-->
+                    </div><!-- direction-tabs end-->
+                </div><!-- map-tabs end-->
+            </div><!-- col end-->
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="ts-map">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe src="https://www.google.com/maps/embed/v1/place?q=enset+douala&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end-->
+    <div class="speaker-shap">
+        <img class="shap1 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="300ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis3.png' %}" alt="">
+        <img class="shap2 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="400ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis2.png' %}" alt="">
+        <img class="shap3 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="500ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis4.png' %}" alt="">
+        <img class="shap4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis1.png' %}" alt="">
+    </div>
+</section>
+
+{% endblock content %}

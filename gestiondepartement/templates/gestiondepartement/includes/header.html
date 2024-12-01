@@ -1,0 +1,372 @@
+{% load static %}
+<header>
+    <div class="container">
+        <div class="left">
+            <ul Class=''>
+            <li id="ControlHeader_TopMenu1_rptrTopMenu_liContainer_0">
+                <a href="https://www.univ-douala.cm/" id="ControlHeader_TopMenu1_rptrTopMenu_aTitle_0">Université de Douala</a>
+            </li>
+        
+            <li id="ControlHeader_TopMenu1_rptrTopMenu_liContainer_1">
+                <a href="https://www.ensetdouala.net/" id="ControlHeader_TopMenu1_rptrTopMenu_aTitle_1">ENSET De Douala</a>
+            </li>
+        
+            <li id="ControlHeader_TopMenu1_rptrTopMenu_liContainer_2">
+                <a href="#futurs-etudiants.html" id="ControlHeader_TopMenu1_rptrTopMenu_aTitle_2"> Futurs &#233;tudiants</a>
+            </li>
+        
+            <li id="ControlHeader_TopMenu1_rptrTopMenu_liContainer_3">
+                <a href="#etudiants-actuels.html" id="ControlHeader_TopMenu1_rptrTopMenu_aTitle_3">&#201;tudiants actuels</a>
+            </li>
+        
+            <li id="ControlHeader_TopMenu1_rptrTopMenu_liContainer_4">
+                <a href="#enseignants-et-employes.html" id="ControlHeader_TopMenu1_rptrTopMenu_aTitle_4">Enseignants et employ&#233;s</a>
+            </li>
+        </ul>
+
+    
+        </div>
+        <div class="right">
+        <ul>
+            <li>
+                
+                <div class="headerSearch inlineMiddle">
+                    <div id="ControlHeader_SearchBlock1_pnlSearch" class="headerSearch inlineMiddle" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ControlHeader_SearchBlock1_btnSearch&#39;)">
+	
+    <a href="javascript:;" class="toggleSearch"><i class="fas fa-search"></i></a>
+    <div class="searchInner">
+      
+      <input name="ctl00$ControlHeader$SearchBlock1$txtKeyword" type="text" id="ControlHeader_SearchBlock1_txtKeyword" class="searchInput" placeholder="Chercher" /><input type="submit" name="ctl00$ControlHeader$SearchBlock1$btnSearch" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ControlHeader$SearchBlock1$btnSearch&quot;, &quot;&quot;, true, &quot;ValidateSearch&quot;, &quot;&quot;, false, false))" id="ControlHeader_SearchBlock1_btnSearch" />
+      <span id="ControlHeader_SearchBlock1_CustomValidator1" class="errorSearch errMsg" style="display:none;">s'il vous plaît entrez un mot clé</span>
+      <span id="ControlHeader_SearchBlock1_cusCustom" class="errorSearch errMsg" style="display:none;">Entrez au moins 3 caractères.</span>
+    </div>
+
+</div>
+
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;" class="star" title="Connexion"><img src="{% static 'gestiondepartement/images/grey_star.svg'%}" alt="Connexion"></a>
+                <ul class="favdropdwn">
+                    <li><a href="{% url 'accounts:login_user' %}">Portail Administration</a></li>
+                    <li><a href="{% url 'accounts:login_user' %}">Portail Etudiant</a></li>
+                </ul>
+            </li>
+			   {% comment %} <li>
+               
+             <a href="https://ua.edu.lb/en/virtual-tour">360° Tour </a>
+                
+            </li> {% endcomment %}
+            <li>
+                <span class="selectedLanguage">Français</span>
+                <ul class="langSelector">
+              <li><a href="#" id="ControlHeader_englishurl">Anglais</a></li>
+                    <li><a href="{% url 'gestiondepartement:home' %}" id="ControlHeader_frenchurl">Français</a></li>
+                 </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+</header>
+
+<div class="mainHeader">
+    <div class="container">
+        <div class="logo">
+       <a href="{% url 'gestiondepartement:home' %}" id="ControlHeader_logourl" >
+            <img src="{% static 'gestiondepartement/images/enset.png'%}" style="height:60px;width:110px;" alt="">
+        </a>
+		<p style="color:white;font-weight:600;">SCIENCE DE L'EDUCATION </p>
+        </div>
+        <div class="navbar">
+        <div class="top">
+            <ul>
+                {% comment %} <li>
+                    <a id="ControlHeader_TopMenuApplyPage" class="external" href="bureau-d-orientation-et-d-admission/je-soumets-ma-candidature.html">Postuler</a>
+                </li> {% endcomment %}
+				<li>
+                    <a id="ControlHeader_TopMenuApplyPage" class="external" href="{% url 'gestioncolloque:index' %}">Postuler Au Colloque A venir</a>
+                </li>
+                <li class="TopMenu2">
+                    <ul Class=''>
+            <li id="ControlHeader_TopMenu2_rptrTopMenu_liContainer_0">
+                <a href="{% url 'gestiondepartement:contribuer' %}" id="ControlHeader_TopMenu2_rptrTopMenu_aTitle_0">Contribuer </a>
+            </li>
+        
+             <li id="ControlHeader_TopMenu2_rptrTopMenu_liContainer_1">
+                <a href="#" id="ControlHeader_TopMenu2_rptrTopMenu_aTitle_1"></a>
+            </li> 
+        </ul>
+
+    
+                </li>
+                <li class="socialIconsContainor">
+                    
+        <div class="blockMain socialIconsMain">
+            <h5 class="simpleListTitle">Suivez-nous sur:</h5>
+            <ul class="socialIcons">
+    
+                <li><a href="{% url 'accounts:login_user' %}" id="ControlHeader_SocialIconsLsting_rptSocialLinks_aSocial_0" title="Connexion" >CONNEXION</a></li>
+    
+                {% comment %} <li><a href="https://www.linkedin.com/company/universiteantonine" id="ControlHeader_SocialIconsLsting_rptSocialLinks_aSocial_1" target="_blank" title="linkedin" class="fa fa-linkedin"><i id="ControlHeader_SocialIconsLsting_rptSocialLinks_iClassHolder_1" aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+    
+                <li><a href="http://instagram.com/uAntonine" id="ControlHeader_SocialIconsLsting_rptSocialLinks_aSocial_2" target="_blank" title="insta" class="fa fa-instagram"><i id="ControlHeader_SocialIconsLsting_rptSocialLinks_iClassHolder_2" aria-hidden="true" class="fa fa-instagram"></i></a></li>
+    
+                <li><a href="http://twitter.com/uantonine" id="ControlHeader_SocialIconsLsting_rptSocialLinks_aSocial_3" target="_blank" title="Twitter" class="fa fa-twitter"><i id="ControlHeader_SocialIconsLsting_rptSocialLinks_iClassHolder_3" aria-hidden="true" class="fa fa-twitter"></i></a></li>
+    
+                <li><a href="https://www.facebook.com/uAntonine/" id="ControlHeader_SocialIconsLsting_rptSocialLinks_aSocial_4" target="_blank" title="facebook" class="fa fa-facebook"><i id="ControlHeader_SocialIconsLsting_rptSocialLinks_iClassHolder_4" aria-hidden="true" class="fa fa-facebook"></i></a></li>
+    
+                <li><a href="https://www.tiktok.com/@uantonine" id="ControlHeader_SocialIconsLsting_rptSocialLinks_aSocial_5" target="_blank" title="Tiktok" style="background-image:url(gestiondepartement/ContentFiles/31441Image.png);"><i id="ControlHeader_SocialIconsLsting_rptSocialLinks_iClassHolder_5" aria-hidden="true"></i></a></li>
+     {% endcomment %}
+        </ul>
+      </div>
+    
+
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                
+<div class="menusMainCustom">
+    <div class="mainMenuCustom">
+        <ul>
+                <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_liContainer_0" class=" hasSubmenu">
+                <a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_hlTitle_0" href="javascript:;">Étudiants</a>
+                    <div class="ddSecondLevel">
+                        <div class="left"><ul><li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_0"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_0" href="#affaires-estudiantines.html">Bureau des affaires estudiantines (AE)</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_1"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_1" href="#bureau-des-affaires-sociales.html">Bureau de la Scolarité</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_2"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_2" href="#registraire.html">Bureau des Stages</a>
+                                
+                                {% comment %} </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_3"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_3" href="bureau-des-examens.html">Bureau des examens</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_4"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_4" href="service-d-appui-au-succes-academique.html">Service d’appui au succès académique</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_5"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_5" href="pecua.html">Pool Étudiant de Concertation Universitaire Antonine</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_6"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_6" href="https://ua.edu.lb/Subpage_en.aspx?pageid=15149&amp;lang=3">Bâtiments et équipements</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_7"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_7" href="benevolat-etudiant.html">Bénévolat étudiant</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_8"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_8" href="la-pastorale.html">La pastorale</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_9"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_9" href="service-de-conseil.html">Service de conseil</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_10"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_10" href="bureau-des-sports.html">Bureau des sports</a> {% endcomment %}
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_liContainer_11"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_0_hlTitle_11" href="#gouvernance/l-econome/droits-de-scolarite.html">Droits de scolarité</a>
+                                
+                                </li> </ul>
+              
+                        <div id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_divExtraMenuContent_0"><div class='right'><p>Connexe</p>
+<ul>
+    <li><a href="{% url 'accounts:login_user' %}" target="_blank">Portail Etudiants</a></li>
+    <li><a href="{% url 'accounts:login_user' %}" target="_blank">Portail Administration</a></li>
+   
+</ul></div></div>
+                    </div>
+                </li>
+               
+            
+                <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_liContainer_1" class=" hasSubmenu">
+                <a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_hlTitle_1" href="javascript:;">Admission </a>
+                    <div class="ddSecondLevel">
+                        <div class="left"><ul><li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_liContainer_0"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_hlTitle_0" href="#bureau-d-orientation-et-d-admission.html">Bureau d’orientation et d’admission</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_liContainer_1"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_hlTitle_1" href="#premier-cycle.html">Premier cycle</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_liContainer_2"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_hlTitle_2" href="#deuxieme-cycle.html">Deuxième cycle</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_liContainer_3"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_hlTitle_3" href="#bureau-d-orientation-et-d-admission/resultats-des-examens-d-admission.html">Résultats des examens d’admission</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_liContainer_4"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_hlTitle_4" href="#premier-cycle/examens-d-entree.html">Examens d’entrée</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_liContainer_5"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_1_hlTitle_5" href="#bureau-d-orientation-et-d-admission/dates-a-retenir.html">Dates à retenir</a>
+                                
+                                </li> </ul>
+              
+                        <div id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_divExtraMenuContent_1"><div class='right'><p style="text-align: left;">Connexe</p>
+<ul>
+    {% comment %} <li style="text-align: left;"><a href="visite-virtuelle-a-360.html" target="_blank"><span class="ui-provider vh b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">D&eacute;couvrez le campus &agrave; 360&deg;</span></a></li> {% endcomment %}
+    <li style="text-align: left;"><a href="#affaires-estudiantines.html" target="_blank"><span class="ui-provider vh b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">Vie estudiantine</span></a></li>
+    <li style="text-align: left;"><a href="#bureau-d-orientation-et-d-admission/guide-d-admission.html" target="_blank"><span class="ui-provider vh b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">Guide d'admission</span></a></li>
+</ul></div></div>
+                    </div>
+                </li>
+               
+            
+                <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_liContainer_2" class=" hasSubmenu">
+                <a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_hlTitle_2" href="javascript:;">Formations</a>
+                    <div class="ddSecondLevel">
+                        <div class="left"><ul><li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_0"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_0" href="asb.html">Filière Conseiller d'Orientation (CO) </a>
+                                
+                                {% comment %} </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_1"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_1" href="fet.html">Faculté d’ingénierie et de technologie</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_2"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_2" href="fic.html">Faculté d'information et de communication</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_3"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_3" href="fmm.html">Faculté de musique et musicologie</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_4"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_4" href="fph.html">Faculté de santé publique</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_5"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_5" href="fss.html">Faculté des sciences du sport</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_6"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_6" href="fot.html">Faculté de théologie</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_7"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_7" href="specialisations-et-programmes.html">Spécialisations et programmes </a>
+                                 {% endcomment %}
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_8"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_8" href="https://www.ensetdouala.net/Departement">Autres Filières ENSET de Douala</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_9"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_9" href="#calendrier-academique.html">Calendrier académique</a>
+                                
+                                {% comment %} </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_10"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_10" href="#centre-de-langues.html">Centre de langues</a> {% endcomment %}
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_liContainer_11"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_2_hlTitle_11" href="#international.html">Etrangers</a>
+                                
+                                </li> </ul>
+              
+                        <div id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_divExtraMenuContent_2"></div>
+                    </div>
+                </li>
+               
+            
+                <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_liContainer_3" class=" hasSubmenu">
+                <a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_hlTitle_3" href="javascript:;">Recherche </a>
+                    <div class="ddSecondLevel">
+                        <div class="left"><ul><li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_liContainer_0"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_hlTitle_0" href="https://www.univ-douala.cm/Recherches.php">Ecole doctorale à la recherche</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_liContainer_1"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_hlTitle_1" href="#https://ua.edu.lb/Subpage_en.aspx?pageid=15349&amp;lang=3">Unités de recherche</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_liContainer_2"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_hlTitle_2" href="#https://ua.edu.lb/Subpage_en.aspx?pageid=15404&amp;lang=3">Les articles de l'ENSET de DOUALA</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_liContainer_3"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_3_hlTitle_3" href="#https://ua.edu.lb/Subpage_en.aspx?pageid=15421&amp;lang=3">Bibliothèque du département SED</a>
+                                
+                                </li> </ul>
+              
+                        <div id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_divExtraMenuContent_3"></div>
+                    </div>
+                </li>
+               
+            
+                <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_liContainer_4" class=" hasSubmenu">
+                <a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_hlTitle_4" href="javascript:;">Le Dprt SED en bref</a>
+                    <div class="ddSecondLevel">
+                        <div class="left"><ul><li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_0"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_0" href="{% url 'gestiondepartement:apropos' %}">A propos de nous</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_1"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_1" href="#gouvernance.html">Administration </a>
+                                
+                                {% comment %} </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_2"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_2" href="isaq.html">Initiatives stratégiques et assurance qualité</a> {% endcomment %}
+                                
+                                {% comment %} </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_3"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_3" href="https://ua.edu.lb/Subpage_en.aspx?pageid=31939&amp;lang=3">Objectifs de développement durable : 17 objectifs pour transformer notre monde</a> {% endcomment %}
+                                
+                                {% comment %} </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_4"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_4" href="international.html">International</a> {% endcomment %}
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_5"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_5" href="#campus.html">Campus</a>
+                                
+                                </li> <li id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_liContainer_6"><a id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_rptrSecondLevelMenu_4_hlTitle_6" href="#https://ua.edu.lb/DirectoryListing_en.aspx?pageid=15486&amp;lang=3">Annuaires</a>
+                                
+                                </li> </ul>
+              
+                        <div id="ControlHeader_MainMenuCustom_rptrMainMenuCustom_divExtraMenuContent_4"></div>
+                    </div>
+                </li>
+               
+            
+                 
+                </ul>       
+    </div>
+</div>
+               </div>
+               <div class="right">
+                    <ul Class=''>
+            <li id="ControlHeader_TopMenu3_rptrTopMenu_liContainer_0">
+                {% comment %} <a href="https://ua.edu.lb/Subpage_en.aspx?pageid=15575&amp;lang=3" id="ControlHeader_TopMenu3_rptrTopMenu_aTitle_0">La chorale</a> {% endcomment %}
+            </li>
+        
+            <li id="ControlHeader_TopMenu3_rptrTopMenu_liContainer_1">
+                <a href="{% url 'gestioncolloque:index' %}" id="ControlHeader_TopMenu3_rptrTopMenu_aTitle_1" style="font-size:14px;color:;text-decoration:underline;">COLLOQUE INTERNATIONALE</a>
+            </li>
+        </ul>
+
+    
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="header" style="display:none;">
+    <div class="topHeader">
+            <div class="clearfix">
+                <div class="floatLeft">
+                    
+                </div>
+                <div class="floatRight">
+                    <div class="languagesSelect">
+                        
+                        
+                    </div>
+                    
+                    
+                    <div id="changePasswordPopup" style="display:none">
+                        <iframe id="ControlHeader_iframe1"></iframe>
+                        
+                    </div>
+
+                    <div class="headerBtns inlineMiddle">
+                        <div class="dropDown quickLinks">
+                            <a class="dropDownToggle headerBtn" href="javascript:;"><span class="dropDownText">Liens rapides</span></a>
+                            <ul class="dropDownMenu row">
+
+                                
+                                      <li class="col-md-3 col-sm-6 col-xs-12">
+                                         <ul>
+                                    
+                                       <li><a href="#https://ua.edu.lb/saison-musicale" id="ControlHeader_RptQuickLinks_aTitle_0">
+                                            Saison de Musique de Chambre</a></li>
+                                        
+                                    
+                                       <li><a href="#https://ua.edu.lb/?pageid=3136&amp;lang=3" id="ControlHeader_RptQuickLinks_aTitle_1">
+                                             Association Etudiant</a></li>
+                                        
+                                    
+                                       <li><a href="#https://ua.edu.lb/french/guide-dutilisation-du-sis" id="ControlHeader_RptQuickLinks_aTitle_2">
+                                            Guide d'utilisation du SIS </a></li>
+                                        
+                                    
+                                        </ul></li>
+                                    
+                                <li class="col-md-3">
+                                 
+                                    <ul>
+                                        
+                                                <li><a href="#https://ua.edu.lb/french/webmail" id="ControlHeader_RptOnLineTools_aTitle_0">
+                                                    Webmail </a></li>
+                                            
+                                                <li><a href="#https://ecourses-prod.ua.edu.lb/auth/oidc/" id="ControlHeader_RptOnLineTools_aTitle_1">
+                                                    Moodle</a></li>
+                                            
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="bottomHeader">
+            <a href="javascript:;" class="mobileMenuToggler"></a>
+            <div class="logoHolder">
+                <a href="{% url 'gestiondepartement:home' %}" id="ControlHeader_aLogo">
+                    <img src="{% static 'gestiondepartement/images/logo.png'%}"></a>
+            </div>
+            
+        <div class="clearfix"></div>
+    </div>
+
+
+</div>

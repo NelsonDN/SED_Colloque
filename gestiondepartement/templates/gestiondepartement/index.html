@@ -1,0 +1,1178 @@
+{% extends "gestiondepartement/layouts/app.html" %}
+
+{% block title %}
+Accueil
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+<script type="text/javascript">
+
+    function ValidateSearch(source, args) {
+
+        var control = $(".searchInput").attr("id")
+        var ctrl = document.getElementById(control).value
+        var keyword = ctrl;
+        args.IsValid = keyword.length > 2;
+
+    }
+</script>
+
+{% comment %} <script src="https://ua.edu.lb/AutoSuggestJS?v=h45ocqt9EtxyvYp2ncrzB5fS7H4r6QTqlzf66CQNx6w1"></script> {% endcomment %}
+
+<script src="{% static 'gestiondepartement/images/autosuggest.js' %}"></script>
+
+
+   {% comment %} <link href="https://ua.edu.lb/AutoSuggestStyle?v=SyzOvjPbox447J8DTL1pyGHj1VNXZz1t-ig-J6L4_Bo1" rel="stylesheet"/> {% endcomment %}
+   
+   <link href="{% static 'gestiondepartement/images/autosuggest.css' %}" rel="stylesheet"/>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        AutoSuggest();
+        $('[href="https://ecourses.ua.edu.lb"]').attr("href", "http://ecourses.ua.edu.lb/");
+
+        $('span.selectedLanguage').click(function () {
+            $('ul.langSelector').slideToggle();
+        });
+		if (location.href.indexOf('index.html') > 0) {
+            $('.selectedLanguage').text('French')
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        var container = $("ul.langSelector,span.selectedLanguage");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('ul.langSelector').slideUp();
+        }
+    });
+
+    function AutoSuggest() {
+
+
+        //==================== Search With all plugins =================================================
+        // Set autosuggest options with all plugins activated & response in xml
+        var options = {
+            script: "/searchaction.aspx?limit=10&lang=3&",
+            varname: "input",
+            shownoresults: true,                   // If disable, display nothing if no results
+            noresults: "No Results",        // String displayed when no results
+            maxresults: 5,                         // Max num results displayed
+            cache: false,                          // To enable cache
+            minchars: 3,                                  // Start AJAX request with at leat 2 chars
+            timeout: 10000,                        // AutoHide in XX ms
+            callback: function (obj) {           // Callback after click or selection
+                window.location = obj.link;
+            }
+        };
+        // Init autosuggest
+        var as_json = new bsn.AutoSuggest('ControlHeader_SearchBlock1_txtKeyword', options);
+    }
+
+</script>
+
+
+
+
+
+        
+    <div class="mainCarousel">
+        
+        
+        <div class="sliderMain ">
+            <div class="loaderHolder">
+                <div class="loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="flexslider">
+                <ul class="slides">
+    
+        <li id="cpMain_BannersControl_rptSlides_liItem_0" class="fullBg" style="background-image: url({% static 'gestiondepartement/images/affiche1.jpg'%});" data-thumb="{% static 'gestiondepartement/images/affiche1.jpg'%}">
+            <a href="{% url 'gestioncolloque:index' %}" id="cpMain_BannersControl_rptSlides_aFakeLink_0" class="fakeLink" target="_self"></a>
+            
+    
+            <div class="sliderContent">
+            <div class="container sliderHeight">
+                <div class="row">
+                    <div class="col-md-12 posRelative">
+                        <div class="sliderContent">
+                            
+                                <h2 class="sliderTitle">
+                                    <a id="cpMain_BannersControl_rptSlides_hlTitle_0" href="{% url 'gestioncolloque:index' %}" target="_self">Colloque internationale 2024</a></h2>
+                            
+                            
+                            <div id="cpMain_BannersControl_rptSlides_sliderBtnHolder_0" class="sliderBtnHolder">
+                                <a id="cpMain_BannersControl_rptSlides_hlMore_0" href="{% url 'gestioncolloque:index' %}" target="_self">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </li>
+    
+        <li id="cpMain_BannersControl_rptSlides_liItem_1" class="fullBg" style="background-image: url({% static 'gestiondepartement/images/monument.jpg'%});" data-thumb="{% static 'gestiondepartement/images/monument.jpg'%}">
+            <a href="#" id="cpMain_BannersControl_rptSlides_aFakeLink_1" class="fakeLink" target="_self"></a>
+            
+    
+            <div class="sliderContent">
+            <div class="container sliderHeight">
+                <div class="row">
+                    <div class="col-md-12 posRelative">
+                        <div class="sliderContent">
+                            
+                                <h2 class="sliderTitle">
+                                    <a id="cpMain_BannersControl_rptSlides_hlTitle_1" href="#" target="_self">Calendrier acad&eacute;mique 2024 &ndash; 25</a></h2>
+                            
+                            
+                            <div id="cpMain_BannersControl_rptSlides_sliderBtnHolder_1" class="sliderBtnHolder">
+                                <a id="cpMain_BannersControl_rptSlides_hlMore_1" href="#" target="_self">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </li>
+
+		<li id="cpMain_BannersControl_rptSlides_liItem_2" class="fullBg" style="background-image: url({% static 'gestiondepartement/images/affiche2.jpg'%});" data-thumb="{% static 'gestiondepartement/images/affiche2.jpg'%}">
+            <a href="{% url 'gestioncolloque:index' %}" id="cpMain_BannersControl_rptSlides_aFakeLink_2" class="fakeLink" target="_self"></a>
+            
+    
+            <div class="sliderContent">
+            <div class="container sliderHeight">
+                <div class="row">
+                    <div class="col-md-12 posRelative">
+                        <div class="sliderContent">
+                            
+                                <h2 class="sliderTitle">
+                                    <a id="cpMain_BannersControl_rptSlides_hlTitle_2" href="{% url 'gestioncolloque:index' %}" target="_self">Progamme du Colloque</a></h2>
+                            
+                            
+                            <div id="cpMain_BannersControl_rptSlides_sliderBtnHolder_2" class="sliderBtnHolder">
+                                <a id="cpMain_BannersControl_rptSlides_hlMore_2" href="{% url 'gestioncolloque:index' %}" target="_self">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </li>
+    
+        </ul>
+  </div>
+</div>
+    
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $(".videoSlider")[0].play();
+        }, 500)
+        console.log("video play");
+    });
+
+
+
+</script>
+        
+        
+
+    </div>
+     
+     <div id="cpMain_adWrapper" class="adWrapper container"> <a id="cpMain_adLink" target="_blank">  
+         <img id="cpMain_adImage" /></a></div>                      
+    
+
+<div class="newsEvents">
+    <div class="container">
+    <div class="row">
+
+        <div class="left col-md-8">
+            <div class="newsListing">
+                <div class="">
+                <div class="blockHead smallBotMargin">
+                    <div class="sideLinks">
+                       <a href="#toutes-nos-actus.html" id="cpMain_ControlNewsEventsHomePage_aLinkAllNews" class="viewAll">Voir Tout</a>
+                    </div>
+                    <h2>Actualités et événements</h2>
+                </div>
+				 <p id="cpMain_ControlNewsEventsHomePage_intro"></p>
+                <div class="blockBody">
+                    <div>
+                        <ul class="listingHolder row owl-carousel">
+                            
+                            
+                                    <li class="listingItemLI col-md-12 col-sm-12 col-xs-12">
+                                        <div class="listingItem op1v1" data-mh="matchHeightWithTabs">
+                                            <div class="listingImage zoomhover listingImageLoad" data-mh="sameHeightImage">
+                                                <a href="#actualites/semaine-d-accueil-de-l-ua-2024.html" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink1_0">
+                                                    <img src="{% static 'gestiondepartement/images/etudiants.jpg'%}" id="cpMain_ControlNewsEventsHomePage_rptNews_image_0" />
+                                                </a>
+                                            </div>
+                                            <div class="listingInfos" data-mh="sameHeight">
+                                                <div id="cpMain_ControlNewsEventsHomePage_rptNews_DivDate_0" class="listingDate">16 septembre 2024</div>
+                                                <h3 class="listingTitle">
+                                                    <a href="#actualites/semaine-d-accueil-de-l-ua-2024.html" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink2_0">Semaine d’accueil du département 2024 : Un voyage de d&#233;couverte, de liens et de croissance </a>
+                                                </h3>
+                                                <h3 class="listingLink readMore">
+                                                   <a href="#actualites/semaine-d-accueil-de-l-ua-2024.html" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink3_0">
+                                                         Lire la suite 
+                                                    </a>
+                                                </h3>
+                                                
+                                       
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="listingItemLI col-md-12 col-sm-12 col-xs-12">
+                                        <div class="listingItem op1v1" data-mh="matchHeightWithTabs">
+                                            <div class="listingImage zoomhover listingImageLoad" data-mh="sameHeightImage">
+                                                <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink1_1">
+                                                    <img src="{% static 'gestiondepartement/images/amphi.jpg'%}" id="cpMain_ControlNewsEventsHomePage_rptNews_image_1" />
+                                                </a>
+                                            </div>
+                                            <div class="listingInfos" data-mh="sameHeight">
+                                                <div id="cpMain_ControlNewsEventsHomePage_rptNews_DivDate_1" class="listingDate">23 au 25 Octobre 2024</div>
+                                                <h3 class="listingTitle">
+                                                    <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink2_1">Colloque Internationale DES DEPARTEMENT ET LABORATOIRES DES SCIENCES DE L'EDUCATION 2024</a>
+                                                </h3>
+                                                <h3 class="listingLink readMore">
+                                                   <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink3_1">
+                                                         Lire la suite 
+                                                    </a>
+                                                </h3>
+                                                
+                                       
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="listingItemLI col-md-12 col-sm-12 col-xs-12">
+                                        <div class="listingItem op1v1" data-mh="matchHeightWithTabs">
+                                            <div class="listingImage zoomhover listingImageLoad" data-mh="sameHeightImage">
+                                                <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink1_2">
+                                                    <img src="{% static 'gestiondepartement/images/affiche1.jpg'%}" id="cpMain_ControlNewsEventsHomePage_rptNews_image_2" />
+                                                </a>
+                                            </div>
+                                            <div class="listingInfos" data-mh="sameHeight">
+                                                <div id="cpMain_ControlNewsEventsHomePage_rptNews_DivDate_2" class="listingDate">23 au 25 Octobre 2024</div>
+                                                <h3 class="listingTitle">
+                                                    <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink2_2">COLLOQUE 2024 - L'Adéquation Formation Emploi en Débat : LES EXPERIENCES CAMEROUNAISES ET AFRICAINES </a>
+                                                </h3>
+                                                <h3 class="listingLink readMore">
+                                                   <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink3_2">
+                                                         Lire la suite 
+                                                    </a>
+                                                </h3>
+                                                
+                                       
+                                            </div>
+                                        </div>
+                                    </li> 
+                                
+                                    <li class="listingItemLI col-md-12 col-sm-12 col-xs-12">
+                                        <div class="listingItem op1v1" data-mh="matchHeightWithTabs">
+                                            <div class="listingImage zoomhover listingImageLoad" data-mh="sameHeightImage">
+                                                <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink1_3">
+                                                    <img src="{% static 'gestiondepartement/images/sortie.jpg'%}" id="cpMain_ControlNewsEventsHomePage_rptNews_image_3" />
+                                                </a>
+                                            </div>
+                                            <div class="listingInfos" data-mh="sameHeight">
+                                                <div id="cpMain_ControlNewsEventsHomePage_rptNews_DivDate_3" class="listingDate">Soon 2024</div>
+                                                <h3 class="listingTitle">
+                                                    <a href="{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink2_3">C&#233;r&#233;monie de remise des dipl&#244;mes de l’ENSET De Douala : Une histoire de b&#233;n&#233;dictions </a>
+                                                </h3>
+                                                <h3 class="listingLink readMore">
+                                                   <a href="a{% url 'gestioncolloque:index' %}" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink3_3">
+                                                         Lire la suite 
+                                                    </a>
+                                                </h3>
+                                                
+                                       
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                    {% comment %} <li class="listingItemLI col-md-12 col-sm-12 col-xs-12">
+                                        <div class="listingItem op1v1" data-mh="matchHeightWithTabs">
+                                            <div class="listingImage zoomhover listingImageLoad" data-mh="sameHeightImage">
+                                                <a href="actualites/l-ua-remet-la-plume-de-bronze-a-mme-agnes-de-geoffroy.html" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink1_4">
+                                                    <img src="{% static 'gestiondepartement/ContentFiles/36606ListingImage.jpg'%}" id="cpMain_ControlNewsEventsHomePage_rptNews_image_4" />
+                                                </a>
+                                            </div>
+                                            <div class="listingInfos" data-mh="sameHeight">
+                                                <div id="cpMain_ControlNewsEventsHomePage_rptNews_DivDate_4" class="listingDate">18 juin 2024</div>
+                                                <h3 class="listingTitle">
+                                                    <a href="actualites/l-ua-remet-la-plume-de-bronze-a-mme-agnes-de-geoffroy.html" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink2_4">L’UA remet la Plume de bronze &#224; Mme Agn&#232;s de Geoffroy </a>
+                                                </h3>
+                                                <h3 class="listingLink readMore">
+                                                   <a href="actualites/l-ua-remet-la-plume-de-bronze-a-mme-agnes-de-geoffroy.html" id="cpMain_ControlNewsEventsHomePage_rptNews_aLink3_4">
+                                                         Lire la suite 
+                                                    </a>
+                                                </h3>
+                                                
+                                       
+                                            </div>
+                                        </div>
+                                    </li> {% endcomment %}
+                                
+                        </ul>
+                    </div>
+                    <div class="no-records">
+                    </div>
+                </div>
+                <div class="clearBoth"></div>
+                <div class="centered"></div>
+                <div class="loadmore" style="display: none;">
+                    <!-- paging -->
+                </div>
+                <div class="clearBoth"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right col-md-4">
+            <div class="events">
+			 <div class="sideLinks upcomming">
+                            <a href="calendrier-general.html" id="cpMain_ControlNewsEventsHomePage_aLinkAllEvents" class="viewAll"> Voir Tout</a>
+                      </div>
+                <div class="title">Prochains événements</div>
+                    <div class="tabs">
+                        <div class="tabsHead">
+                            <ul>
+                                <li class="active">Académique</li>
+                                <li>Général</li>
+                            </ul>
+                        </div>
+                        <div class="tabsDetails">
+                            <div class="tab tab0" >
+                                <ul class="listingHolder">
+                                    
+                                            <li class="listingItemLI">
+                                                <div class="listingItem">
+                                                    <div class="listingInfos">
+                                                        <div id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_DivDate_0" class="listingDate">16 Septembe 2024</div>
+                                                        <div class="listingTitle">
+                                                            <a href="#https://ua.edu.lb/EventDetails_en.aspx?pageid=36896&amp;lang=3" id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_aLink1_0" style="display:none">Rentrée académique</a> <a href="calendrier-academique.html" id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_aLink11_0">Rentrée académique 2024</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        
+                                            <li class="listingItemLI">
+                                                <div class="listingItem">
+                                                    <div class="listingInfos">
+                                                        <div id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_DivDate_1" class="listingDate">23 au 25 Octobe 2024</div>
+                                                        <div class="listingTitle">
+                                                            <a href="#https://ua.edu.lb/EventDetails_en.aspx?pageid=36897&amp;lang=3" id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_aLink1_1" style="display:none">Colloque internationale</a> <a href="#calendrier-academique.html" id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_aLink11_1">Colloque internationale 2024 : Département SED</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        
+                                            {% comment %} <li class="listingItemLI">
+                                                <div class="listingItem">
+                                                    <div class="listingInfos">
+                                                        <div id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_DivDate_2" class="listingDate">Soon 2024</div>
+                                                        <div class="listingTitle">
+                                                            <a href="#https://ua.edu.lb/EventDetails_en.aspx?pageid=36899&amp;lang=3" id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_aLink1_2" style="display:none">Cerémonie officiel 45ème promotion</a> <a href="#calendrier-academique.html" id="cpMain_ControlNewsEventsHomePage_rptEventsAcademic_aLink11_2">Jour de l’Ind&#233;pendance</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li> {% endcomment %}
+
+                                        
+                                    <li class="listingItemLI">
+                                        <div class="listingItem">
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab tab1" style="display:inline-block">
+                                <ul class="listingHolder">
+                                    
+                                            <li class="listingItemLI">
+                                                <div class="listingItem">
+                                                    <div class="listingInfos">
+                                                        <div id="cpMain_ControlNewsEventsHomePage_rptEventsGeneral_DivDate_0" class="listingDate">23 au 25 Octobre 2024</div>
+
+                                                        <div class="listingTitle">
+                                                            <a href="#evenement/formation-sur-l-orientation-professionnelle.html" id="cpMain_ControlNewsEventsHomePage_rptEventsGeneral_aLink1_0">Colloque internationale : Adéquation Formation Emploi </a>
+															 <a href="#calendrier-academique.html" id="cpMain_ControlNewsEventsHomePage_rptEventsGeneral_aLink11_0" style="display:none">Colloque internationale : Adéquation Formation Emploi </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="mainContent">
+        <div class="widthBanner">
+            <div id="cpMain_certifiedTitle" class="title"></div>
+            <div class="accGallery">
+                <div class="container">
+                    <div class="alist">
+                        <a href="{% static 'gestiondepartement/images/Colloqueadéquationformationemploi.pdf'%}" id="cpMain_anchor1" target="_blank">
+                            <img src="{% static 'gestiondepartement/images/affiche3.jpg'%}" id="cpMain_image1" />
+                        </a>
+                        <a href="{% static 'gestiondepartement/images/affiche1.jpg'%}" id="cpMain_anchor2" data-fancybox="accgal">
+                            <img src="{% static 'gestiondepartement/images/affiche1.jpg'%}" id="cpMain_image2" />
+                        </a>
+                        <a href="{% static 'gestiondepartement/images/affiche2.jpg'%}" id="cpMain_anchor3" data-fancybox="accgal">
+                            <img src="{% static 'gestiondepartement/images/affiche2.jpg'%}" id="cpMain_image3" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="link">
+                <a href="#isaq/accreditations-institutionnelles.html" id="cpMain_certifiedLink"></a>
+            </div>
+        </div>
+        <div class="homeSec1 greyBgDark">
+            <div class="container">
+                <div class="introBlocks">
+                    <div class="row">
+                        <div id="cpMain_DivBlockLeft" class="col-md-6">
+                            <div id="cpMain_divBGLeftBlock" class="whiteBlock withBackground" Style="background-image:url(%27/ContentFiles/14569HighlightedContentLeftImage.html)">
+                                <h2 id="cpMain_h2LeftBlockTitle">
+                                    Calendrier</h2>
+                                
+                                
+                                <div id="cpMain_DivLeftLink" class="listingLink">
+                                    <a href="#https://ua.edu.lb/calendrier" id="cpMain_aLeftLink" class="normalBtn">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cpMain_DivBlockRight" class="col-md-6">
+                            <div id="cpMain_divBGRightBlock" class="whiteBlock withBackground" Style="background-image:url(%27/ContentFiles/14569HighlightedContentRightImage.html)">
+                                <h2 id="cpMain_h2RightBlockTitle">
+                                    Bureau du registraire</h2>
+                                
+                                
+                                <div id="cpMain_DivRightLink" class="listingLink">
+                                    <a href="#https://ua.edu.lb/french/bureau-du-registraire/repertoire" id="cpMain_aRightLink" class="normalBtn">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cpMain_MediaBlockHp_divNewsBlock" class="mediaBlock">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="block newsEvents">
+                <div class="blockHead smallBotMargin">
+
+                    <h2 id="cpMain_MediaBlockHp_h2Title" class="blockTitle">Actualités et événements </h2>
+                </div>
+
+                <div class="blockBody">
+
+                    <ul class="listingHolder gridView row ">
+                        
+                        
+                                <li class="col-md-4 singleNews">
+                                    <div id="cpMain_MediaBlockHp_rptMedia_divNode_0" class="listingItem" style="background-image: url({% static 'gestiondepartement/ContentFiles/31375Image.jpg'%});">
+                                        <a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31374&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aFullLink_0" class="fullLink"></a>
+                                        <div class="listingInfo">
+                                            <div id="cpMain_MediaBlockHp_rptMedia_divDate_0" class="listingDate">21 février 2023</div>
+                                            <h3 class="listingTitle"><a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31374&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aTitle_0">La perception actuelle des musiques savantes au Liban : le regard d’un critique musical, une conférence d’Alain E. Andrea</a></h3>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li class="col-md-4 singleNews">
+                                    <div id="cpMain_MediaBlockHp_rptMedia_divNode_1" class="listingItem" style="background-image: url({% static 'gestiondepartement/ContentFiles/31359Image.jpg'%});">
+                                        <a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31358&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aFullLink_1" class="fullLink"></a>
+                                        <div class="listingInfo">
+                                            <div id="cpMain_MediaBlockHp_rptMedia_divDate_1" class="listingDate">06 février 2023</div>
+                                            <h3 class="listingTitle"><a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31358&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aTitle_1">Signature d’une convention de coopération entre l’UA et l’ESFAM-AUF</a></h3>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li class="col-md-4 singleNews">
+                                    <div id="cpMain_MediaBlockHp_rptMedia_divNode_2" class="listingItem" style="background-image: url({% static 'gestiondepartement/ContentFiles/31344Image.jpg'%});">
+                                        <a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31343&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aFullLink_2" class="fullLink"></a>
+                                        <div class="listingInfo">
+                                            <div id="cpMain_MediaBlockHp_rptMedia_divDate_2" class="listingDate">18 janvier 2023</div>
+                                            <h3 class="listingTitle"><a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31343&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aTitle_2">Mémorandum d’entente entre l’Université Antonine et la Fédération libanaise de tennis de table</a></h3>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li class="col-md-4 singleNews">
+                                    <div id="cpMain_MediaBlockHp_rptMedia_divNode_3" class="listingItem" style="background-image: url({% static 'gestiondepartement/ContentFiles/31345Image.jpg'%});">
+                                        <a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31325&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aFullLink_3" class="fullLink"></a>
+                                        <div class="listingInfo">
+                                            <div id="cpMain_MediaBlockHp_rptMedia_divDate_3" class="listingDate">15 décembre 2022</div>
+                                            <h3 class="listingTitle"><a href="#https://ua.edu.lb/newsDetails.aspx?pageid=31325&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aTitle_3">L'UA participe à la Semaine mondiale de la Francophonie scientifique</a></h3>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li class="col-md-4 singleNews">
+                                    <div id="cpMain_MediaBlockHp_rptMedia_divNode_4" class="listingItem" style="background-image: url({% static 'gestiondepartement/ContentFiles/30337Image.jpg'%});">
+                                        <a href="#https://ua.edu.lb/newsDetails.aspx?pageid=30333&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aFullLink_4" class="fullLink"></a>
+                                        <div class="listingInfo">
+                                            <div id="cpMain_MediaBlockHp_rptMedia_divDate_4" class="listingDate">12 avril 2022</div>
+                                            <h3 class="listingTitle"><a href="#https://ua.edu.lb/newsDetails.aspx?pageid=30333&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aTitle_4">Duo dynamique composé de Louise de Ricolfis, soprano et Margot Germain, piano</a></h3>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li class="col-md-4 singleNews">
+                                    <div id="cpMain_MediaBlockHp_rptMedia_divNode_5" class="listingItem" style="background-image: url({% static 'gestiondepartement/ContentFiles/30331Image.jpg'%});">
+                                        <a href="https://ua.edu.lb/newsDetails.aspx?pageid=30330&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aFullLink_5" class="fullLink"></a>
+                                        <div class="listingInfo">
+                                            <div id="cpMain_MediaBlockHp_rptMedia_divDate_5" class="listingDate">06 avril 2022</div>
+                                            <h3 class="listingTitle"><a href="https://ua.edu.lb/newsDetails.aspx?pageid=30330&amp;lang=3" id="cpMain_MediaBlockHp_rptMedia_aTitle_5">Journée scientifique des activités physiques adaptées (APA) et de la santé </a></h3>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            
+                    </ul>
+
+                </div>
+                <div class="clearBoth"></div>
+                <div id="cpMain_MediaBlockHp_divViewAllBottom" class="viewAllBottom listingLink">
+                    <a id="cpMain_MediaBlockHp_hlViewAll2" class="viewAll normalBtn" href="https://ua.edu.lb/french/actualites-et-evenements/evenements">Voir Tout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="cpMain_ctl00_lbItemFile" class="itemslinks"></span> 
+<input type="hidden" name="ctl00$cpMain$ctl00$hdItemID" id="cpMain_ctl00_hdItemID" /><input name="ctl00$cpMain$ctl00$hdMultiItemsIDs" type="hidden" id="cpMain_ctl00_hdMultiItemsIDs" class="hiddenOrder" />
+        
+
+        
+<div class="homeSec2" id="trigger">
+    <h2 id="cpMain_ListingFacultiesHp_h2Title" class="blockTitle"></h2>
+    <div class="container">
+        <div class="facultyTabs">
+            <div class="tabsMain">
+                <div class="tabsLinks">
+                    
+                            <a id="cpMain_ListingFacultiesHp_rptCat_aCatTitle_0" class="startActive" Style="background-image: url({% static 'gestiondepartement/ContentFiles/20748Image.jpg'%});"><span id="cpMain_ListingFacultiesHp_rptCat_spanCatTitle_0">Campus</span></a>
+                        
+                            <a id="cpMain_ListingFacultiesHp_rptCat_aCatTitle_1" class="startActive" Style="background-image: url({% static 'gestiondepartement/images/amphid.jpg'%});"><span id="cpMain_ListingFacultiesHp_rptCat_spanCatTitle_1">Filières</span></a>
+                        
+                            {% comment %} <a id="cpMain_ListingFacultiesHp_rptCat_aCatTitle_2" class="startActive" Style="background-image: url({% static 'gestiondepartement/ContentFiles/1293Image.jpg'%});"><span id="cpMain_ListingFacultiesHp_rptCat_spanCatTitle_2">Départements</span></a> {% endcomment %}
+                        
+                    
+                    
+                </div>
+                <div class="tabsHolder">
+                    
+                            <div class="tab">
+                                <div class="blockBody">
+                                    <div class="facultyListing">
+                                        <ul class="listingHolder ">
+                                            
+
+                                                    <li class="">
+                                                        <a href="campus/campus-principal-de-hadat-baabda.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_aFacColor_0" class="facultyBlock capushadath"><span>
+                                                            Campus principal Douala Ndogbong</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="campus/campus-principal-de-hadat-baabda.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_aFacTitle_0">Campus principal de Douala-Ndogbong</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_DivPopUp_0" class="facultyDetail1 capushadath">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    {% comment %} <li class="">
+                                                        <a href="campus/campus-de-nabi-ayla-zahle.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_aFacColor_1" class="facultyBlock campusnabiaylazahle"><span>
+                                                            Campus de Nabi Ayla–Zahlé </span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="campus/campus-de-nabi-ayla-zahle.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_aFacTitle_1">Campus de Nabi Ayla–Zahlé </a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_DivPopUp_1" class="facultyDetail1 campusnabiaylazahle">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="campus/campus-de-mejdlaya-zgharta.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_aFacColor_2" class="facultyBlock campusmejdlayazgharta"><span>
+                                                            Campus de Mejdlaya–Zgharta</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="campus/campus-de-mejdlaya-zgharta.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_aFacTitle_2">Campus de Mejdlaya–Zgharta</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_0_DivPopUp_2" class="facultyDetail1 campusmejdlayazgharta">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li> {% endcomment %}
+
+                                                
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+                            <div class="tab">
+                                <div class="blockBody">
+                                    <div class="facultyListing">
+                                        <ul class="listingHolder ">
+                                            
+
+                                                    <li class="">
+                                                        <a href="#asb.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_0" class="facultyBlock BusAdmin"><span>
+                                                            Conseiller d'orientation</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="#asb.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_0">Conseiller d'orientation </a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_0" class="facultyDetail1 BusAdmin">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    {% comment %} <li class="">
+                                                        <a href="fet.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_1" class="facultyBlock Engineering"><span>
+                                                            Faculté d’ingénierie et de technologie</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="fet.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_1">Faculté d’ingénierie et de technologie</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_1" class="facultyDetail1 Engineering">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="fic.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_2" class="facultyBlock InfoComm"><span>
+                                                            Faculté d'information et de communication</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="fic.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_2">Faculté d'information et de communication</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_2" class="facultyDetail1 InfoComm">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="fmm.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_3" class="facultyBlock Musicology"><span>
+                                                            Faculté de musique et musicologie</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="fmm.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_3">Faculté de musique et musicologie</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_3" class="facultyDetail1 Musicology">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="fph.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_4" class="facultyBlock Pubhlt"><span>
+                                                            Faculté de santé publique</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="fph.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_4">Faculté de santé publique</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_4" class="facultyDetail1 Pubhlt">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="fss.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_5" class="facultyBlock sprtsc"><span>
+                                                            Faculté des sciences du sport</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="fss.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_5">Faculté des sciences du sport</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_5" class="facultyDetail1 sprtsc">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="fot.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacColor_6" class="facultyBlock PastStud"><span>
+                                                            Faculté de théologie</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="fot.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_aFacTitle_6">Faculté de théologie</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_1_DivPopUp_6" class="facultyDetail1 PastStud">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+                            <div class="tab">
+                                <div class="blockBody">
+                                    <div class="facultyListing">
+                                        <ul class="listingHolder ">
+                                            
+
+                                                    <li class="">
+                                                        <a href="bureau-d-orientation-et-d-admission.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_0" class="facultyBlock offOrAd"><span>
+                                                            Bureau d’orientation et d’admission</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="bureau-d-orientation-et-d-admission.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_0">Bureau d’orientation et d’admission</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_0" class="facultyDetail1 offOrAd">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="affaires-estudiantines.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_1" class="facultyBlock offStudAff"><span>
+                                                            Bureau des affaires estudiantines</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="affaires-estudiantines.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_1">Bureau des affaires estudiantines</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_1" class="facultyDetail1 offStudAff">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="bureau-des-affaires-sociales.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_2" class="facultyBlock offFinAid"><span>
+                                                            Bureau des affaires sociales</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="bureau-des-affaires-sociales.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_2">Bureau des affaires sociales</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_2" class="facultyDetail1 offFinAid">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="registraire.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_3" class="facultyBlock offreg"><span>
+                                                            Bureau du registraire</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="registraire.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_3">Bureau du registraire</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_3" class="facultyDetail1 offreg">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="bureau-des-examens.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_4" class="facultyBlock offexm"><span>
+                                                            Bureau des examens</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="bureau-des-examens.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_4">Bureau des examens</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_4" class="facultyDetail1 offexm">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="https://ua.edu.lb/Subpage_en.aspx?pageid=15521&amp;lang=3" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_5" class="facultyBlock offcomm"><span>
+                                                            Bureau de la communication</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="https://ua.edu.lb/Subpage_en.aspx?pageid=15521&amp;lang=3" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_5">Bureau de la communication</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_5" class="facultyDetail1 offcomm">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="ressources-humaines.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_6" class="facultyBlock offhr"><span>
+                                                            Bureau des ressources humaines </span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="ressources-humaines.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_6">Bureau des ressources humaines </a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_6" class="facultyDetail1 offhr">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="https://ua.edu.lb/Subpage_en.aspx?pageid=21776&amp;lang=3" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_7" class="facultyBlock offit"><span>
+                                                            Département des technologies de l’information</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="https://ua.edu.lb/Subpage_en.aspx?pageid=21776&amp;lang=3" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_7">Département des technologies de l’information</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_7" class="facultyDetail1 offit">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="centre-de-langues.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_8" class="facultyBlock offlan"><span>
+                                                            Centre de langues</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="centre-de-langues.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_8">Centre de langues</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_8" class="facultyDetail1 offlan">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li>
+
+                                                
+
+                                                    <li class="">
+                                                        <a href="diplomes.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacColor_9" class="facultyBlock offalRel"><span>
+                                                            Diplômés</span></a>
+                                                        <div class="facultyTitle">
+                                                            <a href="diplomes.html" id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_aFacTitle_9">Diplômés</a>
+                                                        </div>
+
+                                                        <div id="cpMain_ListingFacultiesHp_rptFacultyTabs_rptFaculty_2_DivPopUp_9" class="facultyDetail1 offalRel">
+
+                                                            <h3></h3>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                               
+                                                    </li> {% endcomment %}
+
+                                                
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+        <div id="cpMain_DivBlueBlock" class="homeSec3">
+
+            <div id="cpMain_trigger2" class="careerBanner" Style="background-image: url({% static 'gestiondepartement/images/amphi.jpg'%});">
+                <div class="container">
+                    <ul class="listingHolder row">
+                        <li class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingInfo floatLeft" data-mh="group2">
+                                    <h3 id="cpMain_h3BlueBlockTitle" class="listingTitle">
+                                        Lancez votre carrière</h3>
+                                    <div id="cpMain_DivBlueBlockText" class="listingDescription">Le Bureau d&rsquo;Insertion Professionnelle (BiP) a pour mission de former tous les &eacute;tudiants &agrave; partir de leur premi&egrave;re ann&eacute;e. Il les aide &agrave; travailler sur la &laquo;connaissance de soi&nbsp;&raquo;, ainsi que de tisser des liens avec le monde professionnel tout en leur fournissant les comp&eacute;tences et outils n&eacute;cessaires pour r&eacute;aliser l&rsquo;accomplissement de leur insertion professionnelle.</div>
+                                    <div id="cpMain_DivBlueBlockLink" class="listingLink">
+                                        <a href="#https://ccd.ua.edu.lb/center-for-career-development/home" id="cpMain_aBlueBlockButton" class="normalBtn reversedBtn" target="_blank">Commencez Maintenant</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="cpMain_DivMap" class="homeSec4">
+            <div class="campusMap">
+                <img src="{% static 'gestiondepartement/ContentFiles/14569MapImage.jpg'%}" id="cpMain_imgMap" alt="Accueil" title="Accueil" />
+            </div>
+        </div>
+        <div class="homeSec5">
+            <div class="container">
+                <div class="row">
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+
+<div id="cpMain_BICMSZone_LoadingPanel" style="display:none;background-color:White;text-align:center;">
+	
+    <img id="cpMain_BICMSZone_Image1" title="loading" src="{% static 'gestiondepartement/images/ajax.gif'%}" alt="loading" />
+    <br />
+    Loading...
+
+</div>
+<div id="ctl00_cpMain_BICMSZone_upMain" style="height:100%;width:100%;">
+	<!-- 2019.3.1023.45 -->
+    <div id="cpMain_BICMSZone_divButtons">
+        
+    </div>
+    <div id="cpMain_BICMSZone_Panel1" class="column" style="border-width:1px;border-style:None;">
+		
+        <div class="portlet">
+            
+            <input name="ctl00$cpMain$BICMSZone$txtOrder" type="hidden" id="cpMain_BICMSZone_txtOrder" class="hiddenOrder" />
+        </div>
+    
+	</div>
+    
+
+</div>
+<div id="ctl00_cpMain_BICMSZone_RadWindowManager1" style="display:none;">
+	<div id="ctl00_cpMain_BICMSZone_RadWindow1" style="display:none;">
+		<div id="ctl00_cpMain_BICMSZone_RadWindow1_C" style="display:none;">
+
+		</div><input id="ctl00_cpMain_BICMSZone_RadWindow1_ClientState" name="ctl00_cpMain_BICMSZone_RadWindow1_ClientState" type="hidden" />
+	</div><div id="ctl00_cpMain_BICMSZone_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_cpMain_BICMSZone_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_cpMain_BICMSZone_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_cpMain_BICMSZone_RadWindowManager1_ClientState" name="ctl00_cpMain_BICMSZone_RadWindowManager1_ClientState" type="hidden" />
+</div>
+
+
+
+
+
+        
+    </div>
+{% endblock content %}

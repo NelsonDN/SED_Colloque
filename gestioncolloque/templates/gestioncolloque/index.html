@@ -1,0 +1,645 @@
+{% extends "gestioncolloque/layouts/app.html" %}
+
+{% block title %}
+Colloque International 2024
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+<!-- banner start-->
+<section class="hero-area" style="margin-top:-30px;">
+    <div class="banner-item" style="background-image:url({% static 'gestioncolloque/assets/images/hero_area/banner2.jpg' %})">
+       <div class="container">
+          <div class="row align-items-center">
+             <div class="col-lg-8">
+                <div class="banner-content-wrap">
+
+                   <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">23 au 25 Octobre 2024, ENSET DE DOUALA, Cameroun</p>
+                   <h3 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">COLLOQUE INTERNATIONAL : ADEQUATION FORMATION - EMPLOI EN DEBAT </h3>
+
+                   <div class="countdown wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
+                      <div class="counter-item">
+                         <i class="icon icon-ring-1Asset-1"></i>
+                         <span class="days">00</span>
+                         <div class="smalltext">Jours</div>
+
+                      </div>
+                      <div class="counter-item">
+                         <i class="icon icon-ring-4Asset-3"></i>
+                         <span class="hours">00</span>
+                         <div class="smalltext">Heure</div>
+                      </div>
+                      <div class="counter-item">
+                         <i class="icon icon-ring-3Asset-2"></i>
+                         <span class="minutes">00</span>
+                         <div class="smalltext">Minutes</div>
+                      </div>
+                      <div class="counter-item">
+                         <i class="icon icon-ring-4Asset-3"></i>
+                         <span class="seconds">00</span>
+                         <div class="smalltext">Secondes</div>
+                      </div>
+                   </div>
+                   <!-- Countdown end -->
+                   <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
+                      <a href="{% url 'gestioncolloque:pricing' %}" class="ticket-btn btn">INSCRIPTION</a>
+                   </div>
+
+                </div>
+                <!-- Banner content wrap end -->
+             </div><!-- col end-->
+             <div class="col-lg-4">
+                <div class="banner-img">
+                   <img src="{% static 'gestioncolloque/assets/bgh1.png' %}" style="height:650px;width:850px;" alt="">
+                </div>
+             </div>
+          </div><!-- row end-->
+       </div>
+       <!-- Container end -->
+    </div>
+    <!-- banner slice image-->
+    <div class="tiles">
+       <div class="tile" data-scale="1.1" data-image="{% static 'gestioncolloque/assets/images/hero_area/banner_slices.png' %}"></div>
+    </div>
+ </section>
+ <!-- banner end-->
+
+<!-- banner start-->
+
+       <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="ts-extra-feature banner-content-wrap">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-md-12 text-center">
+                            <h2 style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px;">
+                                Colloque International des Départements et Laboratoire des Sciences de l’Éducation 2024
+                            </h2>
+                        </div>
+                    </div><!-- end row -->
+                </div>
+            </div>
+        </div>
+        
+                </div><!-- end ts-extra-feature -->
+             </div>
+          </div>
+       </div>
+       <!-- Container end -->
+ 
+ <!-- banner end-->
+
+ <!-- ts intro start -->
+ <section class="ts-intro-item section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">
+                <div class="intro-left-content">
+                    <h2 class="column-title">
+                        <span>Pourquoi Participer</span>
+                        APPEL  A CONTRIBUTIONS
+                    </h2>
+                    <p>
+                        Participez à un événement clé pour discuter des enjeux d'adéquation Formation-Emploi : Les Expériences Camerounaises et Africaines, et découvrez les perspectives d'experts, chercheurs et professionnels du domaine.
+                    </p>
+                    <a href="{% url 'gestioncolloque:pricing' %}" class="btn">S'inscrire Maintenant</a>
+                </div>
+            </div><!-- col end-->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+                        <div class="single-intro-text mb-30">
+                            <i class="icon icon-speaker"></i>
+                            <h3 class="ts-title">Intervenants de Qualité</h3>
+                            <p>
+                                Écoutez des experts et chercheurs renommés partager leurs connaissances et expériences sur l’adéquation formation-emploi.
+                            </p>
+                            <span class="count-number">01</span>
+                        </div><!-- single intro text end-->
+                    </div><!-- col end-->
+                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+                        <div class="single-intro-text mb-30">
+                            <i class="icon icon-networking"></i>
+                            <h3 class="ts-title">Nouvelles Rencontres</h3>
+                            <p>
+                                Rencontrez des professionnels, chercheurs et étudiants de divers horizons et développez votre réseau. Entrez en contact.
+                            </p>
+                            <span class="count-number">02</span>
+                        </div><!-- single intro text end-->
+                    </div><!-- col end-->
+                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
+                        <div class="single-intro-text mb-30">
+                            <i class="icon icon-people"></i>
+                            <h3 class="ts-title">Opportunités de Networking</h3>
+                            <p>
+                                Échangez des idées et explorez des collaborations avec d'autres chercheurs et acteurs du marché du travail.
+                            </p>
+                            <span class="count-number">03</span>
+                        </div><!-- single intro text end-->
+                    </div><!-- col end-->
+                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">
+                        <div class="single-intro-text mb-30">
+                            <i class="icon icon-fun"></i>
+                            <h3 class="ts-title">Un Moment Agréable</h3>
+                            <p>
+                                Profitez d'une ambiance conviviale et engageante tout en abordant des sujets sérieux     autour de la cause africanistes et ensemble posons les bases.
+                            </p>
+                            <span class="count-number">04</span>
+                        </div><!-- single intro text end-->
+                    </div><!-- col end-->
+                </div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end-->
+</section>
+<!-- ts intro end-->
+
+<section class="ts-director-message-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="director-photo wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="300ms">
+                    <img src="{% static 'gestioncolloque/assets/directrice.jpg' %}" alt="Directrice de l'École Normale Supérieure" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+                    Mot de la Directrice
+                </h2>
+                <p class="director-message wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+                    L’École normale supérieure d’enseignement technique (ENSET) abrite du 23 au 25 octobre 2024 le colloque sur l’adéquation formation emploi. 
+                    <br><br>
+                    Cette rencontre scientifique s’inscrit en droite ligne des missions d’appui au développement et de la professionnalisation des enseignements. C’est l’occasion de poser un regard scientifique sur les dispositifs institutionnels, les stratégies individuelles et les enjeux épistémologiques qui participent à construire, peu ou prou, la relation entre la formation et l’emploi aux échelles camerounaises et africaines. 
+                    <br><br>
+                    En outre, ce sera un moment de rencontre entre les mondes universitaire et professionnel qui partagent la même soif d’innovations et très souvent la même attente quant à la finalité de la formation. Cette finalité qui se nomme « compétence » doit être comprise comme une alliance intelligente entre savoir, savoir-être et valeur intrinsèque du diplômé.
+                    <br><br>
+                    In fine, chers collègues enseignants-chercheurs, chers étudiants, chers partenaires de l’ENSET de Douala je vous convie à ce qui sera une occasion de contribuer, dans un esprit d’ouverture intellectuelle, au développement des relations pérennes entre la formation et l’emploi.
+                </p>
+                <p class="director-name wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
+                    Pr. NDJAKOMO ESSIANE Salomé <br>
+                    Directrice de l'École Normale Supérieure de l’Enseignement Technique (ENSET) de l'Université de Douala.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ts director message section end -->
+
+
+<section class="ts-attendees-info section-bg">
+    <div class="container">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="200ms">
+            Qui Sont Attendus ?
+        </h2>
+        <p class="section-description wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">
+            Ce colloque rassemblera un éventail diversifié de participants, permettant des échanges riches et variés sur l'adéquation formation-emploi.
+        </p>
+        <div class="row">
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+                <div class="attendee-card">
+                    {% comment %} <i class="icon icon-researcher"></i> {% endcomment %}
+                    <h3 class="attendee-title">Chercheurs Universitaires</h3>
+                    <p>
+                        Partage de recherches et d'analyses approfondies sur les défis de l'éducation et du marché du travail.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+                <div class="attendee-card">
+                    {% comment %} <i class="icon icon-business"></i> {% endcomment %}
+                    <h3 class="attendee-title">Représentants d'Entreprises</h3>
+                    <p>
+                        Échange d'idées sur les compétences requises et les attentes du secteur privé face aux diplômés.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
+                <div class="attendee-card">
+                    <i class="icon icon-network"></i>
+                    <h3 class="attendee-title">Professionnels du Marché</h3>
+                    <p>
+                        Facilitation des discussions autour des tendances du marché et des opportunités d'emploi.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">
+                <div class="attendee-card">
+                    <i class="icon icon-international"></i>
+                    <h3 class="attendee-title">Organisations Internationales</h3>
+                    <p>
+                        Apport d'expertise sur les meilleures pratiques internationales en matière d'éducation et d'emploi.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
+                <div class="attendee-card">
+                    <i class="icon icon-investor"></i>
+                    <h3 class="attendee-title">Investisseurs et Financiers</h3>
+                    <p>
+                        Présentation d'opportunités d'investissement dans les projets éducatifs et les startups.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="900ms">
+                <div class="attendee-card">
+                    <i class="icon icon-student"></i>
+                    <h3 class="attendee-title">Étudiants et Chercheurs d'Emploi</h3>
+                    <p>
+                        Accès à des informations sur les carrières et les opportunités de stage dans divers domaines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ts attendees info end-->
+
+
+ <!-- ts experience start-->
+ <section id="ts-experiences" class="ts-experiences">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-6 no-padding">
+             <div class="exp-img" style="background-image:url({% static 'gestioncolloque/assets/amphi.jpg' %})">
+                <!-- <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/cta_img.jpg' %}" alt=""> -->
+             </div>
+          </div><!-- col end-->
+          <div class="col-lg-6 no-padding align-self-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+             <div class="ts-exp-wrap">
+                <div class="ts-exp-content">
+                   <h2 class="column-title" style="margin-right:50px; display: flex; flex-direction: column;">
+                      <span>Obtenir de l'expérience</span>
+                      <span style="font-size: 24px; font-weight: bold; margin-top: 10px; color: #fff;">Programme du Colloque</span>
+                   </h2>
+                    <ul class="program-list" style="color:white;font-weight: normal;">
+                        <li><strong>Communications scientifiques en ateliers</strong></li>
+                        <li><strong>Exposition des réalisations professionnelles en Ingenierie et en Technologie</strong></li>
+                        <li><strong>Foire de l'Emploi </strong></li>
+                        <li><strong>Ateliers thématiques</strong></li>
+                        <li><strong>Visite des stands</strong></li>
+                    </ul>
+                </div>
+             </div>
+
+          </div><!-- col end-->
+       </div><!-- row end-->
+    </div><!-- container fluid end-->
+ </section>
+ <!-- ts experience end-->
+
+ <!-- ts speaker start-->
+ <section class="ts-intro box-style">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8 mx-auto">
+             <h2 class="section-title text-center">
+                <span>APPEL A CONTRIBUTIONS</span>
+                   LES AXES DU COLLOQUE
+             </h2>
+          </div><!-- col end-->
+       </div><!-- row end-->
+       <div class="row">
+          <div class="col-md-4 item">
+                <div class="about-intro-text text-justify mb-60">
+                   {% comment %} <i class="icon-speaker"></i> {% endcomment %}
+                   <h3 class="ts-title text-center">AXE 1</h3>
+                   <p>
+                        Les processus de liaison entre le niveau institutionnel de la gestion du travail et la gestion de la formation, qui peuvent s’entendre dans le cadre idéologique de l’ajustement structurel par les dispositifs institutionnels à la fois étatiques et professionnels.
+                   </p>
+             </div><!-- single intro text end-->
+          </div><!-- end col-->
+          <div class="col-md-4 item">
+                <div class="about-intro-text text-justify mb-60">
+                   {% comment %} <i class="icon icon-netwrorking"></i> {% endcomment %}
+                   <h3 class="ts-title text-center">AXE 2</h3>
+                   <p>
+                        Les processus de refondation des paradigmes de l’adéquation formation-emploi en Afrique, où les écarts entre l’école et les mondes professionnels se trouvent réduits par la question des insertions sectorielles, des formations ou emplois spécifiques et des dispositifs d’accompagnement professionnel.
+                   </p>
+             </div><!-- single intro text end-->
+          </div><!-- end col-->
+          <div class="col-md-4 item">
+                <div class="about-intro-text text-justify mb-60">
+                   {% comment %} <i class="icon icon-fun"></i> {% endcomment %}
+                   <h3 class="ts-title text-center">AXE 3</h3>
+                   <p>
+                        L’axe des sciences et technologies appliquées dans le cadre du développement durable, interrogeant le rôle des enseignements en ingénierie, en technologies et en recherche appliquée dans l’invention des dispositifs de formation et des créations professionnelles adaptées aux besoins locaux.
+                   </p>
+             </div><!-- single intro text end-->
+          </div><!-- end col-->
+          <div class="indicator"></div>
+       </div><!-- row end -->
+    </div><!-- end container -->
+ </section>
+<!-- Modalités de Participation Start -->
+<section class="ts-participation-details gradient" style="background-image: url({% static 'gestioncolloque/assets/images/pricing/pricing_img.jpg' %})">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title white">
+                    <span>Modalités de Participation</span>
+                    Informations et Soumissions
+                </h2>
+                <p class="participation-instructions" style="color: white;">
+                    Les propositions de communication devront être adressées à l'adresse : <strong><a href="mailto:colloqueafe32@gmail.com" style="color: red;">colloqueafe32@gmail.com</a></strong> au plus tard le <strong>15 août 2024</strong>.
+                </p>
+                <p class="participation-instructions" style="color: white;">
+                    Chaque proposition (en français ou en anglais) doit inclure : un titre, le nom de l'auteur, son affiliation institutionnelle, une adresse mail, et un résumé de 3000 signes maximum. L'axe choisi devra être clairement indiqué.
+                </p>
+                <p class="participation-instructions" style="color: white;">
+                    Les réponses seront adressées aux proposants le <strong>30 août 2024</strong> au plus tard par courriel.
+                </p>
+            </div><!-- col end-->
+        </div><!-- row end-->
+
+        <div class="row">
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+                <div class="participation-fee">
+                    <h3 class="fee-title" style="color: black;">Frais de Participation</h3>
+                    <ul class="fee-list" style="color: white;">
+                        <li><strong>15 000 FCFA</strong> pour les étudiants</li>
+                        <li><strong>30 000 FCFA</strong> pour les enseignants-chercheurs, chercheurs et membres d'institutions publiques ou privées</li>
+                    </ul>
+                </div>
+            </div><!-- col end-->
+
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+                <div class="payment-methods">
+                    <h3 class="payment-title" style="color: black;">Méthodes de Paiement</h3>
+                    <p style="color: white;">Les paiements peuvent être effectués via :</p>
+                    <ul class="payment-list" style="color: white;">
+                        <li>RIA</li>
+                        <li>Western Union</li>
+                        <li>MoneyGram</li>
+                        <li>Orange Money</li>
+                        <li>MTN Money</li>
+                    </ul>
+                    <p style="color: white;">Les paiements doivent être adressés à : <strong>OWONA Eric Augustin</strong></p>
+                    <p style="color: black;">Contacts : <strong>(+237) 699520051 / 651572500</strong></p>
+                </div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+
+        <div class="row">
+            <div class="col-lg-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
+                <div class="international-participants">
+                    <h3 class="international-title" style="color: white;">Participants Internationaux</h3>
+                    <p style="color: white;">Les participants étrangers seront accompagnés pour les modalités pratiques de leur séjour (réservations d'hôtels, modalités de transport, etc.).</p>
+                </div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end-->
+</section>
+<!-- Modalités de Participation End -->
+
+
+ <!-- ts blog start-->
+ <section class="ts-blog section-bg">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <h2 class="section-title">
+                <span>Mise à jour</span>
+                Actualités
+             </h2>
+          </div><!-- col end-->
+       </div><!-- row end-->
+       <div class="row">
+          <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+             <div class="post">
+                <div class="post-media post-image">
+                   <a href="#"><img src="{% static 'gestioncolloque/assets/etudiants.jpg' %}" class="img-fluid" alt=""></a>
+                </div>
+
+                <div class="post-body">
+                   <div class="post-meta">
+                      <span class="post-author">
+                        <a href="#">Par Admin</a>
+                      </span>
+
+                      <div class="post-meta-date">
+                         23 October, 2024
+                      </div>
+                   </div>
+                   <div class="entry-header">
+                      <h2 class="entry-title">
+                         <a href="#">Colloque International</a>
+                      </h2>
+                   </div><!-- header end -->
+
+                   <div class="entry-content">
+                      <p>Rejoignez-nous pour une exploration des enjeux d'adéquation formation-emploi, avec la participation de chercheurs, entreprises et organisations internationales.</p>
+                   </div>
+
+                   <div class="post-footer">
+                      <a href="#news-single.html" class="btn-link">Plus <i class="icon icon-arrow-right"></i></a>
+                   </div>
+
+                </div><!-- post-body end -->
+             </div><!-- post end-->
+          </div><!-- col end-->
+          {% comment %} <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+             <div class="post">
+                <div class="post-media post-image">
+                   <a href="#"><img src="{% static 'gestioncolloque/assets/images/blog/blog2.jpg' %}" class="img-fluid" alt=""></a>
+                </div>
+
+                <div class="post-body">
+                   <div class="post-meta">
+                      <span class="post-author">
+                           <a href="#">BY Admin</a>
+                         </span>
+
+                      <div class="post-meta-date">
+                         October 8, 2018
+                      </div>
+                   </div>
+                   <div class="entry-header">
+                      <h2 class="entry-title">
+                         <a href="#">Adding a New Digital</a>
+                      </h2>
+                   </div><!-- header end -->
+
+                   <div class="entry-content">
+                      <p>How you transform your business asap technology, consumer,</p>
+                   </div>
+
+                   <div class="post-footer">
+                      <a href="news-single.html" class="btn-link">Read More <i class="icon icon-arrow-right"></i></a>
+                   </div>
+
+                </div><!-- post-body end -->
+             </div><!-- post end-->
+          </div><!-- col end-->
+          <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
+             <div class="post">
+                <div class="post-media post-image">
+                   <a href="#"><img src="{% static 'gestioncolloque/assets/images/blog/blog3.jpg' %}" class="img-fluid" alt=""></a>
+                </div>
+
+                <div class="post-body">
+                   <div class="post-meta">
+                      <span class="post-author">
+                              <a href="#">BY Admin</a>
+                            </span>
+
+                      <div class="post-meta-date">
+                         October 8, 2018
+                      </div>
+                   </div>
+                   <div class="entry-header">
+                      <h2 class="entry-title">
+                         <a href="#">West Elm At Evantor</a>
+                      </h2>
+                   </div><!-- header end -->
+
+                   <div class="entry-content">
+                      <p>How you transform your business asap technology, consumer,</p>
+                   </div>
+
+                   <div class="post-footer">
+                      <a href="news-single.html" class="btn-link">Read More <i class="icon icon-arrow-right"></i></a>
+                   </div>
+
+                </div><!-- post-body end -->
+             </div><!-- post end-->
+          </div><!-- col end--> {% endcomment %}
+       </div><!-- row end-->
+    </div><!-- container end-->
+    <!-- shap image-->
+    <div class="speaker-shap">
+       <img class="shap2" src="{% static 'gestioncolloque/assets/images/shap/news_memphis2.png' %}" alt="">
+       <img class="shap1" src="{% static 'gestioncolloque/assets/images/shap/news_memphis1.png' %}" alt="">
+    </div>
+ </section>
+ <!-- ts blog end-->
+
+ <!-- ts sponsors start-->
+ <section class="ts-intro-sponsors" style="background-image: url({% static 'gestioncolloque/assets/images/sponsors/sponsor_img.jpg' %})">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <h2 class="section-title white">
+                <span>Contributions</span>
+                Nos Sponsors
+             </h2><!-- section title end-->
+          </div><!-- col end-->
+       </div><!-- row end-->
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="sponsors-logo text-center">
+                {% comment %} <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor1.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor2.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor3.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor4.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor5.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor6.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor7.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor8.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'gestioncolloque/assets/images/sponsors/sponsor9.png' %}" alt=""></a> {% endcomment %}
+                <div class="sponsor-btn text-center">
+                   <a href="#" class="btn">Devenir un sponsor</a>
+                </div>
+             </div><!-- sponsors logo end-->
+          </div><!-- col end-->
+       </div><!-- row end-->
+    </div><!-- container end-->
+ </section>
+ <!-- ts sponsors end-->
+<!-- ts map direction start-->
+<section class="ts-map-direction wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h2 class="column-title">
+                    <span>Nous rejoindre</span>
+                    Obtenez des indications pour vous rendre
+                    à la salle de l'événement
+                </h2>
+
+                <div class="ts-map-tabs">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#venue" role="tab" data-toggle="tab">Lieu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#time" role="tab" data-toggle="tab">Horaire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how-to-get-there" role="tab" data-toggle="tab">Comment y accéder</a>
+                        </li>
+                    </ul>
+
+                    <!-- Contenu des onglets -->
+                    <div class="tab-content direction-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="venue">
+                            <div class="direction-tabs-content">
+                                <h3>Université de Douala, ENSET</h3>
+                                <p class="derecttion-vanue" style="color: white;">
+                                    Campus ENSET, Logbessou<br/>
+                                    Douala, Cameroun
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="contact-info-box">
+                                            <h3>Informations sur les billets</h3>
+                                            <p><strong>Nom :</strong> OWONA Eric Augustin</p>
+                                            <p><strong>Téléphone :</strong> (+237) 699520051 / 651572500</p>
+                                            {% comment %} <p><strong>Email :</strong> <a href="mailto:colloqueafe32@gmail.com" style="color: white;">colloqueafe32@gmail.com</a></p> {% endcomment %}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contact-info-box">
+                                            <h3>Détails du programme</h3>
+                                            <p><strong>Nom :</strong> OWONA Eric Augustin</p>
+                                            <p><strong>Téléphone :</strong> (+237) 699520051 / 651572500</p>
+                                            {% comment %} <p><strong>Email :</strong> <a href="mailto:colloqueafe32@gmail.com" style="color: white;">colloqueafe32@gmail.com</a></p> {% endcomment %}
+                                        </div>
+                                    </div>
+                                </div><!-- Fin de la rangée -->
+                            </div><!-- direction tabs end-->
+                        </div><!-- tab pane end-->
+
+                        <div role="tabpanel" class="tab-pane fade" id="time">
+                            <div class="direction-tabs-content">
+                                <h3>Horaire de l'événement</h3>
+                                <p class="derecttion-vanue">
+                                    Du 23 au 25 octobre 2024<br/>
+                                    De 9h00 à 17h00 chaque jour
+                                </p>
+                            </div><!-- direction tabs end-->
+                        </div><!-- tab pane end-->
+
+                        <div role="tabpanel" class="tab-pane fade" id="how-to-get-there">
+                            <div class="direction-tabs-content">
+                                <h3>Comment se rendre à l'ENSET</h3>
+                                <p class="derecttion-vanue">
+                                    Utilisez les transports en commun jusqu'à l'arrêt "ENSET" ou suivez les panneaux indiquant l'Université de Douala, Campus ENSET.
+                                </p>
+                            </div><!-- direction tabs end-->
+                        </div><!-- tab pane end-->
+                    </div><!-- direction-tabs end-->
+                </div><!-- map-tabs end-->
+            </div><!-- col end-->
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="ts-map">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe src="https://www.google.com/maps/embed/v1/place?q=enset+douala&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end-->
+    <div class="speaker-shap">
+        <img class="shap1 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="300ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis3.png' %}" alt="">
+        <img class="shap2 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="400ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis2.png' %}" alt="">
+        <img class="shap3 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="500ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis4.png' %}" alt="">
+        <img class="shap4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms" src="{% static 'gestioncolloque/assets/images/shap/Direction_memphis1.png' %}" alt="">
+    </div>
+</section>
+<!-- ts map direction end-->
+
+
+{% endblock content %}

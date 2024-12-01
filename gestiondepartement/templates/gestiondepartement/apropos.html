@@ -1,0 +1,600 @@
+{% extends "gestiondepartement/layouts/app.html" %}
+
+{% block title %}
+A Propos de nous
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+
+<div id="ControlHeader_SubBannerContainer" class="subBanner" style="background-image:url({% static 'gestiondepartement/ContentFiles/15430BgImage343d.jpg'%});">    
+</div>
+
+<div class="header" style="display:none;">
+    <div class="topHeader">
+            <div class="clearfix">
+                <div class="floatLeft">
+                    
+                </div>
+                <div class="floatRight">
+                    <div class="languagesSelect">
+                        
+                        
+                    </div>
+                    
+                    
+                    <div id="changePasswordPopup" style="display:none">
+                        <iframe id="ControlHeader_iframe1"></iframe>
+                        
+                    </div>
+
+                    <div class="headerBtns inlineMiddle">
+                        <div class="dropDown quickLinks">
+                            <a class="dropDownToggle headerBtn" href="javascript:;"><span class="dropDownText">Liens rapides</span></a>
+                            <ul class="dropDownMenu row">
+
+                                
+                                      <li class="col-md-3 col-sm-6 col-xs-12">
+                                         <ul>
+                                    
+                                       <li><a href="https://ua.edu.lb/saison-musicale" id="ControlHeader_RptQuickLinks_aTitle_0">
+                                            Saison de Musique de Chambre</a></li>
+                                        
+                                    
+                                       <li><a href="https://ua.edu.lb/?pageid=3136&amp;lang=3" id="ControlHeader_RptQuickLinks_aTitle_1">
+                                             Chorale de l'Université Antonine</a></li>
+                                        
+                                    
+                                       <li><a href="https://ua.edu.lb/french/guide-dutilisation-du-sis" id="ControlHeader_RptQuickLinks_aTitle_2">
+                                            Guide d'utilisation du SIS </a></li>
+                                        
+                                    
+                                        </ul></li>
+                                    
+                                <li class="col-md-3">
+                                 
+                                    <ul>
+                                        
+                                                <li><a href="https://ua.edu.lb/french/webmail" id="ControlHeader_RptOnLineTools_aTitle_0">
+                                                    Webmail </a></li>
+                                            
+                                                <li><a href="https://ecourses-prod.ua.edu.lb/auth/oidc/" id="ControlHeader_RptOnLineTools_aTitle_1">
+                                                    Moodle</a></li>
+                                            
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="bottomHeader">
+            <a href="javascript:;" class="mobileMenuToggler"></a>
+            <div class="logoHolder">
+                <a href="https://ua.edu.lb/french/home" id="ControlHeader_aLogo">
+                    <img src="../images/logo.png"></a>
+            </div>
+            
+        <div class="clearfix"></div>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+    function ValidateSearch(source, args) {
+
+        var control = $(".searchInput").attr("id")
+        var ctrl = document.getElementById(control).value
+        var keyword = ctrl;
+        args.IsValid = keyword.length > 2;
+
+    }
+</script>
+
+<script src="https://ua.edu.lb/AutoSuggestJS?v=h45ocqt9EtxyvYp2ncrzB5fS7H4r6QTqlzf66CQNx6w1"></script>
+
+
+
+   <link href="https://ua.edu.lb/AutoSuggestStyle?v=SyzOvjPbox447J8DTL1pyGHj1VNXZz1t-ig-J6L4_Bo1" rel="stylesheet"/>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        AutoSuggest();
+        $('[href="https://ecourses.ua.edu.lb"]').attr("href", "http://ecourses.ua.edu.lb/");
+
+        $('span.selectedLanguage').click(function () {
+            $('ul.langSelector').slideToggle();
+        });
+		if (location.href.indexOf('index.html') > 0) {
+            $('.selectedLanguage').text('French')
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        var container = $("ul.langSelector,span.selectedLanguage");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('ul.langSelector').slideUp();
+        }
+    });
+
+    function AutoSuggest() {
+
+
+        //==================== Search With all plugins =================================================
+        // Set autosuggest options with all plugins activated & response in xml
+        var options = {
+            script: "/searchaction.aspx?limit=10&lang=3&",
+            varname: "input",
+            shownoresults: true,                   // If disable, display nothing if no results
+            noresults: "No Results",        // String displayed when no results
+            maxresults: 5,                         // Max num results displayed
+            cache: false,                          // To enable cache
+            minchars: 3,                                  // Start AJAX request with at leat 2 chars
+            timeout: 10000,                        // AutoHide in XX ms
+            callback: function (obj) {           // Callback after click or selection
+                window.location = obj.link;
+            }
+        };
+        // Init autosuggest
+        var as_json = new bsn.AutoSuggest('ControlHeader_SearchBlock1_txtKeyword', options);
+    }
+
+</script>
+
+
+
+
+
+        
+
+    <style>
+        .backButtonLink {
+            position: absolute;
+            right: 0;
+        }
+    </style>
+
+    <div class="innerPageContent">
+        <div class="container">
+            
+        <div class="breadCrumb">
+       
+             <a href='home.html'>Accueil</a> <a href='javascript:;'>Le département des Sciences de l'Education de l'ENSET de Douala en Bref </a><span>A Propos</span>
+</div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 leftMenu">
+                    <div class="contentRight">
+                        <div class="rightMenu simpleListBlock">
+                       
+                            <div id="cpMain_SideNavigationListing_litMainTitle" class="title">SED en un coup d’œil</div>
+
+<div id="cpMain_SideNavigationListing_divSideBar" class="blockMain sidebar">
+    
+    <div class="blockBody">
+        
+                {% comment %} ------------------------------------------------------- {% endcomment %}
+                 {% include 'gestiondepartement/includes/nav-apropos.html' %}
+    </div>
+</div>
+
+
+<div id="cpMain_SideNavigationListing_SideNavigationExtraPageLinkContainer" class="link">
+    
+</div>
+
+<script>
+    if ($(".sidebar").length == 0) {
+        $(".rightMenu.simpleListBlock").parent().parent().hide();
+    }
+</script>
+
+                           <div id="cpMain_adWrapper" class="adWrapper"> <a id="cpMain_adLink" target="_blank">  <img id="cpMain_adImage" /></a></div>                      
+   
+                            </div>
+                    </div>
+
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="contentLeft noPadding">
+ 
+                        <h1 id="cpMain_h2Title" class="pageTitle">Le département des Sciences de l'Education de l'ENSET de Douala en un coup d’œil</h1>
+                        <div id="cpMain_divFisrt" class="normalText">
+						
+                            
+				
+                            <div id="cpMain_DivSection1" class="row">
+                                
+                                
+                            </div>
+										 
+                            
+<p style="text-align: left;">Le département des sciences de l'éducation de l'École Normale Supérieure de l'Enseignement Technique (ENSET) de Douala incarne l'engagement envers l'excellence éducative et le développement des compétences professionnelles. Notre mission est d'offrir une formation de qualité, adaptée aux défis contemporains de l'éducation, tout en préparant nos étudiants à devenir des acteurs compétents et responsables dans le domaine éducatif.</p> <h2 style="text-align: left;">Une formation innovante et dynamique</h2> <p style="text-align: left;">Créé pour répondre aux besoins croissants en matière de formation des enseignants et des éducateurs, notre département s'est efforcé de développer des programmes d'études riches et variés, intégrant des approches théoriques et pratiques. Nous proposons des formations en pédagogie, psychologie de l'éducation, et gestion de l'enseignement, permettant à nos étudiants de se spécialiser selon leurs intérêts et aspirations professionnelles.</p> <p style="text-align: left;">Notre approche éducative repose sur l'apprentissage actif et collaboratif. Nous croyons fermement que les futurs éducateurs doivent être formés dans des environnements stimulants qui encouragent la créativité, l'innovation et la réflexion critique. Grâce à des stages pratiques, des projets de recherche et des échanges académiques, nos étudiants acquièrent les compétences nécessaires pour s'adapter aux réalités du terrain et contribuer de manière significative à la communauté éducative.</p> <p style="text-align: left;">Le département des sciences de l'éducation de l'ENSET de Douala est également engagé dans la recherche et le développement de nouvelles pratiques pédagogiques. Nous collaborons avec des institutions éducatives, des ONG et des partenaires internationaux pour améliorer la qualité de l'éducation au Cameroun et au-delà. Nous croyons que chaque étudiant est unique et mérite un accompagnement personnalisé pour réaliser son potentiel.</p> <p style="text-align: left;">En choisissant notre département, vous rejoignez une communauté dynamique, passionnée par l'éducation et dédiée à l'innovation. Nous vous invitons à imaginer votre avenir avec nous et à devenir un acteur clé dans la transformation du paysage éducatif de notre pays. Ensemble, façonnons l'éducation de demain !</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="cpMain_HtmlPH_lbItemFile" class="itemslinks"></span> 
+<input type="hidden" name="ctl00$cpMain$HtmlPH$hdItemID" id="cpMain_HtmlPH_hdItemID" /><input name="ctl00$cpMain$HtmlPH$hdMultiItemsIDs" type="hidden" id="cpMain_HtmlPH_hdMultiItemsIDs" class="hiddenOrder" />
+                            
+                        </div>
+                         
+                        
+
+<div id="cpMain_BICMSZone1_LoadingPanel" style="display:none;background-color:White;text-align:center;">
+	
+    <img id="cpMain_BICMSZone1_Image1" title="loading" src="../images/ajax.gif" alt="loading" />
+    <br />
+    Loading...
+
+</div>
+<div id="ctl00_cpMain_BICMSZone1_upMain" style="height:100%;width:100%;">
+	<!-- 2019.3.1023.45 -->
+    <div id="cpMain_BICMSZone1_divButtons">
+        
+    </div>
+    <div id="cpMain_BICMSZone1_Panel1" class="column" style="border-width:1px;border-style:None;">
+		
+        <div class="portlet">
+            
+            <input name="ctl00$cpMain$BICMSZone1$txtOrder" type="hidden" id="cpMain_BICMSZone1_txtOrder" class="hiddenOrder" />
+        </div>
+    
+	</div>
+    
+
+</div>
+<div id="ctl00_cpMain_BICMSZone1_RadWindowManager1" style="display:none;">
+	<div id="ctl00_cpMain_BICMSZone1_RadWindow1" style="display:none;">
+		<div id="ctl00_cpMain_BICMSZone1_RadWindow1_C" style="display:none;">
+
+		</div><input id="ctl00_cpMain_BICMSZone1_RadWindow1_ClientState" name="ctl00_cpMain_BICMSZone1_RadWindow1_ClientState" type="hidden" />
+	</div><div id="ctl00_cpMain_BICMSZone1_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_cpMain_BICMSZone1_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_cpMain_BICMSZone1_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_cpMain_BICMSZone1_RadWindowManager1_ClientState" name="ctl00_cpMain_BICMSZone1_RadWindowManager1_ClientState" type="hidden" />
+</div>
+
+
+
+
+                        <div class="marginBottom"></div>
+                        <div class="normalText">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="cpMain_HtmlPH1_lbItemFile" class="itemslinks"></span> 
+<input type="hidden" name="ctl00$cpMain$HtmlPH1$hdItemID" id="cpMain_HtmlPH1_hdItemID" /><input name="ctl00$cpMain$HtmlPH1$hdMultiItemsIDs" type="hidden" id="cpMain_HtmlPH1_hdMultiItemsIDs" class="hiddenOrder" />
+                       
+                            </div>
+                        
+                        
+
+<div id="cpMain_BICMSZone4_LoadingPanel" style="display:none;background-color:White;text-align:center;">
+	
+    <img id="cpMain_BICMSZone4_Image1" title="loading" src="../images/ajax.gif" alt="loading" />
+    <br />
+    Loading...
+
+</div>
+<div id="ctl00_cpMain_BICMSZone4_upMain" style="height:100%;width:100%;">
+	
+    <div id="cpMain_BICMSZone4_divButtons">
+        
+    </div>
+    <div id="cpMain_BICMSZone4_Panel1" class="column" style="border-width:1px;border-style:None;">
+		
+        <div class="portlet">
+            
+            <input name="ctl00$cpMain$BICMSZone4$txtOrder" type="hidden" id="cpMain_BICMSZone4_txtOrder" class="hiddenOrder" />
+        </div>
+    
+	</div>
+    
+
+</div>
+<div id="ctl00_cpMain_BICMSZone4_RadWindowManager1" style="display:none;">
+	<div id="ctl00_cpMain_BICMSZone4_RadWindow1" style="display:none;">
+		<div id="ctl00_cpMain_BICMSZone4_RadWindow1_C" style="display:none;">
+
+		</div><input id="ctl00_cpMain_BICMSZone4_RadWindow1_ClientState" name="ctl00_cpMain_BICMSZone4_RadWindow1_ClientState" type="hidden" />
+	</div><div id="ctl00_cpMain_BICMSZone4_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_cpMain_BICMSZone4_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_cpMain_BICMSZone4_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_cpMain_BICMSZone4_RadWindowManager1_ClientState" name="ctl00_cpMain_BICMSZone4_RadWindowManager1_ClientState" type="hidden" />
+</div>
+
+
+
+
+                        <div class="marginBottom"></div>
+                        
+                    </div>
+                    
+                    
+
+<div id="cpMain_BICMSZone2_LoadingPanel" style="display:none;background-color:White;text-align:center;">
+	
+    <img id="cpMain_BICMSZone2_Image1" title="loading" src="../images/ajax.gif" alt="loading" />
+    <br />
+    Loading...
+
+</div>
+<div id="ctl00_cpMain_BICMSZone2_upMain" style="height:100%;width:100%;">
+	
+    <div id="cpMain_BICMSZone2_divButtons">
+        
+    </div>
+    <div id="cpMain_BICMSZone2_Panel1" class="column" style="border-width:1px;border-style:None;">
+		
+        <div class="portlet">
+            
+            <input name="ctl00$cpMain$BICMSZone2$txtOrder" type="hidden" id="cpMain_BICMSZone2_txtOrder" class="hiddenOrder" />
+        </div>
+    
+	</div>
+    
+
+</div>
+<div id="ctl00_cpMain_BICMSZone2_RadWindowManager1" style="display:none;">
+	<div id="ctl00_cpMain_BICMSZone2_RadWindow1" style="display:none;">
+		<div id="ctl00_cpMain_BICMSZone2_RadWindow1_C" style="display:none;">
+
+		</div><input id="ctl00_cpMain_BICMSZone2_RadWindow1_ClientState" name="ctl00_cpMain_BICMSZone2_RadWindow1_ClientState" type="hidden" />
+	</div><div id="ctl00_cpMain_BICMSZone2_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_cpMain_BICMSZone2_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_cpMain_BICMSZone2_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_cpMain_BICMSZone2_RadWindowManager1_ClientState" name="ctl00_cpMain_BICMSZone2_RadWindowManager1_ClientState" type="hidden" />
+</div>
+
+
+
+
+                    <div class="marginBottom"></div>
+					       <div class="moreListing subpageLinks">
+                        <div class="">
+                           <div class="blockBody">
+                              <div>
+                                 <ul class="listingHolder row">
+                                      
+                             
+                                 </ul>
+                              </div>
+                              <div class="no-records">
+                              </div>
+                           </div>
+                           <div class="clearBoth"></div>
+                        </div>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <input name="ctl00$cpMain$facultyValue" type="text" id="cpMain_facultyValue" style="display:none;" />
+
+    
+        <script>
+            if (document.getElementById("cpMain_backButtonLink").href == "")
+                document.getElementById("cpMain_backButtonLink").remove();
+            <a href="AutoSuggest/index.html">AutoSuggest/</a>
+            var str = document.getElementById('cpMain_facultyValue').value;
+            if (str != null && str != "") {
+                for (const item of document.querySelectorAll(".toggleTitle")) {
+                    if (item.textContent.includes(str)) {
+                        item.className += " active";
+                        item.nextElementSibling.setAttribute("style", "display:block;");
+                    }
+                }
+            }
+        </script>
+
+{% endblock content %}

@@ -1,0 +1,119 @@
+{% extends "gestioncolloque/layouts/app.html" %}
+
+{% block title %}
+Sponsors
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<div id="page-banner-area" class="page-banner-area" style="background-image:url({% static 'gestioncolloque/assets/leanr_bg.png' %})">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+        <div class="text-center">
+       <h2>Sponsors</h2>
+       <ol class="breadcrumb">
+          <li>
+             <a href="#">Accueil /</a>
+          </li>
+          <li>
+                Sponsors
+          </li>
+       </ol>
+        </div>
+    </div><!-- Subpage title end -->
+</div><!-- Page Banner end -->
+
+<section id="ts-sponsors" class="ts-sponsors">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12 mx-auto">
+                <h2 class="section-title text-center">
+                    <span>Appel a Contrbutions</span>
+                    Nos Sponsors
+                </h2>
+            </div>
+        </div>
+        <!--/ Title row end -->
+        <div class="sponsors-wrap">
+            <h3 class="sponsor-title text-center">Sponsors</h3>
+            <div class="row sponsor-padding text-center">
+                {% comment %} <div class="col-lg-3">
+                    <a href="#" class="sponsors-logo">
+                        <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-1.png' %}" alt="" />
+                    </a>
+                </div>
+                <!-- Col 1 end -->
+                <div class="col-lg-3">
+                    <a href="#" class="sponsors-logo">
+                        <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-2.png' %}" alt="" />
+                    </a>
+                </div>
+                <!-- Col 2 end -->
+                <div class="col-lg-3">
+                    <a href="#" class="sponsors-logo">
+                        <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-3.png' %}" alt="" />
+                    </a>
+                </div>
+                <!-- Col 3 end -->
+                <div class="col-lg-3">
+                    <a href="#" class="sponsors-logo">
+                        <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-4.png' %}" alt="" />
+                    </a>
+                </div> {% endcomment %}
+                <!-- Col 3 end -->
+            </div>
+        </div>
+
+        <!--/ Content row 1 end -->
+        
+        <!--/ Content row 2 end -->
+
+        <div class="sponsors-wrap">
+                <h3 class="sponsor-title text-center">Partenaires Media</h3>
+                <div class="row sponsor-padding text-center">
+                    {% comment %} <div class="col-lg-3">
+                        <a href="#" class="sponsors-logo">
+                            <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-1.png' %}" alt="" />
+                        </a>
+                    </div>
+                    <!-- Col 1 end -->
+                    <div class="col-lg-3">
+                        <a href="#" class="sponsors-logo">
+                            <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-2.png' %}" alt="" />
+                        </a>
+                    </div>
+                    <!-- Col 2 end -->
+                    <div class="col-lg-3">
+                        <a href="#" class="sponsors-logo">
+                            <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-3.png' %}" alt="" />
+                        </a>
+                    </div>
+                    <!-- Col 3 end -->
+                    <div class="col-lg-3">
+                        <a href="#" class="sponsors-logo">
+                            <img class="img-fluid" src="{% static 'gestioncolloque/assets/images/sponsors/sponsor-4.png' %}" alt="" />
+                        </a>
+                    </div> {% endcomment %}
+                    <!-- Col 3 end -->
+                </div>
+            </div>
+
+            <!--/ Content row 3 end -->
+
+
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="general-btn text-center">
+                        <a class="btn" href="#">Devenir un Sponsor</a>
+                    </div>
+            </div>
+        </div>
+        <!--/ Content row 3 end -->
+    </div>
+    <!--/ Container end -->
+</section>
+<!-- Sponsors end -->
+
+
+{% endblock content %}

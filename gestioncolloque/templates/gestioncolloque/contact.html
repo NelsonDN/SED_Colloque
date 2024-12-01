@@ -1,0 +1,163 @@
+{% extends "gestioncolloque/layouts/app.html" %}
+
+{% block title %}
+Contact
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+
+
+<div id="page-banner-area" class="page-banner-area" style="background-image:url({% static 'gestioncolloque/assets/leanr_bg.png'%})">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+       <div class="text-center">
+          <h2>Contactez-Nous</h2>
+          <ol class="breadcrumb">
+             <li>
+                <a href="#">Accueil /</a>
+             </li>
+             <li>
+                Contactez-nous
+             </li>
+          </ol>
+       </div>
+    </div><!-- Subpage title end -->
+ </div><!-- Page Banner end -->
+<!-- ts contact start -->
+<section class="ts-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-title text-center">
+                    <span>Obtenir des Informations</span>
+                    Informations de Contact
+                </h2>
+            </div><!-- col end-->
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-intro-text single-contact-feature">
+                    <h3 class="ts-title">Informations sur les Billets</h3>
+                    <p>
+                        <strong>Nom:</strong> OWONA Eric Augustin
+                    </p>
+                    <p>
+                        <strong>Téléphone:</strong>  (+237) 699520051 / 651572500
+                    </p>
+                    <p>
+                        <strong>Email:</strong> <a href="mailto:cabenset@yahoo.fr">cabenset@yahoo.fr</a>
+                    </p>
+                    <span class="count-number fa fa-paper-plane"></span>
+                </div><!-- single intro text end-->
+                <div class="border-shap left"></div>
+            </div><!-- col end-->
+            <div class="col-lg-4">
+                <div class="single-intro-text single-contact-feature">
+                    <h3 class="ts-title">Partenariats</h3>
+                    <p>
+                        <strong>Nom:</strong> OWONA Eric Augustin
+                    </p>
+                    <p>
+                        <strong>Téléphone:</strong>  (+237) 699520051 / 651572500
+                    </p>
+                    <p>
+                        <strong>Email:</strong> <a href="mailto:cabenset@yahoo.fr">cabenset@yahoo.fr</a>
+                    </p>
+                    <span class="count-number fa fa-paper-plane"></span>
+                </div><!-- single intro text end-->
+                <div class="border-shap left"></div>
+            </div><!-- col end-->
+            <div class="col-lg-4">
+                <div class="single-intro-text single-contact-feature">
+                    <h3 class="ts-title">Détails sur le Programme</h3>
+                    <p>
+                        <strong>Nom:</strong>OWONA Eric Augustin
+                    </p>
+                    <p>
+                        <strong>Téléphone:</strong> (+237) 699520051 / 651572500
+                    </p>
+                    <p>
+                        <strong>Email:</strong> <a href="mailto:cabenset@yahoo.fr">cabenset@yahoo.fr</a>
+                    </p>
+                    <span class="count-number fa fa-paper-plane"></span>
+                </div><!-- single intro text end-->
+                <div class="border-shap left"></div>
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end-->
+
+    <div class="speaker-shap">
+        <img class="shap2" src="{% static 'gestioncolloque/assets/images/shap/home_schedule_memphis1.png' %}" alt="">
+    </div>
+</section>
+<!-- ts contact end-->
+
+<section class="ts-contact-map no-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 no-padding">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe src="https://www.google.com/maps/embed/v1/place?q=enset+douala&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ts-contact-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-title text-center">
+                    <span>Avez-vous des Questions?</span>
+                    Envoyez un Message
+                </h2>
+            </div><!-- col end-->
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form id="contact-form" class="contact-form" action="" method="post">
+                    <div class="error-container"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control form-control-name" placeholder="Prénom" name="first_name" id="f-name" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control form-control-name" placeholder="Nom" name="last_name" id="l-name" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control form-control-subject" placeholder="Sujet" name="subject" id="subject" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control form-control-email" placeholder="Email" name="email" id="email" type="email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control form-control-message" name="message" id="message" placeholder="Votre message...*" rows="6" required></textarea>
+                    </div>
+                    <div class="text-center"><br>
+                        <button class="btn" type="submit">Envoyer le Message</button>
+                    </div>
+                </form><!-- Contact form end -->
+            </div>
+        </div>
+    </div>
+    <div class="speaker-shap">
+        <img class="shap1" src="images/shap/home_schedule_memphis2.png" alt="">
+    </div>
+</section>
+
+
+{% endblock content %}

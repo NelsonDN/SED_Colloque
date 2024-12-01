@@ -1,0 +1,350 @@
+{% extends "gestioncolloque/layouts/app.html" %}
+
+{% block title %}
+A Propos
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+
+<div id="page-banner-area" class="page-banner-area" style="background-image:url({% static 'gestioncolloque/assets/leanr_bg.png' %})">
+    <div class="page-banner-title">
+        <div class="text-center">
+            <h2>À Propos du Colloque</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Accueil /</a>
+                </li>
+                <li>
+                    À Propos
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+<!-- Objectives section start -->
+<section class="ts-objectives py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row text-center mb-4">
+            <div class="col-lg-12">
+                <h2 class="section-title mb-3" style="font-weight: bold; color: #0056b3;">
+                    <span>Objectifs du Colloque</span><br>
+                    L'Adéquation Formation-Emploi en Débat
+                </h2>
+                <p class="lead" style="color: #333;">
+                    Ce colloque international vise à encourager l'émergence d'une communauté scientifique panafricaine sur les questions d'adéquation entre la formation et l'emploi, tout en abordant les défis et les opportunités dans le contexte de l'Afrique moderne.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <!-- Objective 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="fa fa-university fa-3x mb-3" style="color:;"></i>
+                        <h5 class="card-title">Favoriser la Recherche Scientifique</h5>
+                        <p class="card-text">
+                            Encourager l'émergence d'une communauté scientifique panafricaine sur les problématiques d'adéquation entre la formation et l'emploi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Objective 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="fa fa-handshake-o fa-3x mb-3" style="color:;"></i>
+                        <h5 class="card-title">Créer des Partenariats</h5>
+                        <p class="card-text">
+                            Favoriser des partenariats productifs entre les entreprises, les administrations publiques et les institutions internationales spécialisées.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Objective 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="fa fa-briefcase fa-3x mb-3" style="color: ;"></i>
+                        <h5 class="card-title">Promouvoir les Réalisations Professionnelles</h5>
+                        <p class="card-text">
+                            Présenter les réalisations professionnelles des étudiants et enseignants à forte portée économique aux entreprises et investisseurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center mt-4">
+            <!-- Final Outcome -->
+            <div class="col-lg-12">
+                <h4 style="color: #0056b3; font-weight: bold;">Perspectives à Long Terme</h4>
+                <p class="text-black">
+                    Un ouvrage collectif sera publié chez un éditeur scientifique pour donner une visibilité accrue aux travaux les plus pertinents issus de cette rencontre.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Objectives section end -->
+
+
+<!-- Section Résultats du Colloque Start -->
+<section class="ts-event-outcome">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="outcome-content ts-exp-content">
+                    <h2 class="column-title">
+                        <span>Résultats Attendus</span>
+                        Apprendre, Connecter, Innover
+                    </h2>
+                    <p class="text-white">
+                        Ce colloque vise à favoriser des discussions enrichissantes et à encourager des collaborations productives
+                        entre les chercheurs, les entreprises et les institutions pour promouvoir des solutions innovantes face aux défis
+                        de l'adéquation formation-emploi.
+                    </p>
+                    <a href="#" class="btn">Participer</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="outcome-content">
+                    <div class="outcome-img overlay">
+                        <img src="{% static 'gestioncolloque/assets/images/about/learn_img.jpg' %}" alt="Apprentissage">
+                    </div>
+                    <h3 class="img-title text-white">Apprendre et Partager</h3>
+                    <p class="text-white">
+                        Approfondir vos connaissances grâce aux présentations et débats sur les meilleures pratiques en matière de formation et d'emploi.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="outcome-content">
+                    <div class="outcome-img overlay">
+                        <img src="{% static 'gestioncolloque/assets/images/about/connect_img.jpg' %}" alt="Connexion">
+                    </div>
+                    <h3 class="img-title text-white">Réseauter et Collaborer</h3>
+                    <p class="text-white">
+                        Créer des partenariats stratégiques avec des professionnels, des chercheurs et des institutions partageant une vision commune.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Résultats du Colloque End -->
+
+<!-- Section Mot du Chef de Département Start -->
+<section class="ts-message">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">
+                    <i class="fa fa-comments fa-2x text-default mb-2"></i>
+                    Mot du Chef de Département
+                </h2>
+                <h4 class="text">Pr BAPES BA BAPES Yves Dieudonné</h4>
+                <p class="text-secondary">Chef de Département des Sciences de l’Éducation</p> <!-- Ajout du titre ici -->
+                <div class="message-content">
+                    <p>De quoi se mêlent les sciences de l’éducation lorsqu’on parle d’adéquation formation emploi ? Cette question pourrait sembler légitime si l’on s’en tient à une perspective stricto sensu des sciences de l’éducation, laquelle consiste à n’examiner que les scènes d’apprentissage ou encore les dimensions psychologique et sociale de l’échec scolaire.</p>
+                    <p>Il se trouve pourtant que l’école, comme la plupart des institutions sociales (l’Eglise, la famille, les organisations politiques, etc.), n’échappe pas à l’emprise du marché puisque la qualité d’un parcours de formation se mesure aujourd’hui à sa capacité à faciliter l’insertion professionnelle des diplômés. Au Cameroun, la plupart des changements opérés dans le champ de l’éducation institutionnelle ces dernières années (approche par compétence, système LMD, numérisation de la formation, valorisation des acquis de l’expérience, etc.) participent en réalité à une transformation néolibérale de l’école.</p>
+                    <p>Face aux turbulences induites par le marché au sein de l’école, les sciences de l’éducation camerounaises se renouvellent lentement mais surement en intégrant à leur portefeuille de compétences le phénomène de l’insertion professionnelle en général et celui de la relation formation emploi en particulier. En se posant la question de savoir ce que deviennent les apprenants après leur formation, les sciences de l’éducation camerounaises, comme leurs équivalentes occidentales plusieurs décennies plus tôt, rejoignent l’économie et la sociologie du travail dans un champ de recherche international extrêmement fécond au regard de la masse critique de publications qui lui sont consacrés dans les revues qui lui sont entièrement ou partiellement dédiées (formation emploi, travail emploi), ou dans celles qui lui accordent des tribunes régulières (les revues généralistes de sociologie et d’économie).</p>
+                    <p>Comme des filles de leur époque, les sciences de l’éducation au Cameroun prennent ainsi à bras le corps la demande sociale notamment, celle qui veut comprendre ce qui se joue dans la boite noire de l’adequationnisme pour agir en connaissance de cause. Au regard de l’enjeu sociétal que constitue l’adéquation formation emploi, nous espérons que cet événement, premier du genre à l’Université de Douala, débouchera sur des échanges productifs et des publications qui enrichiront la littérature scientifique.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Mot du Chef de Département End -->
+
+
+<section class="container my-5 p-4 bg-light rounded shadow">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h2 class="display-6 fw-bold section-title">Argumentaire du Colloque</h2>
+        <p class="text-muted">Une analyse approfondie sur la relation entre la formation et l'emploi.</p>
+      </div>
+    </div>
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <div class="p-3 border rounded bg-white">
+          <h4 class="fw-semibold text-secondary">Le Constat de Chômage</h4>
+          <p>
+            Le diagnostic selon lequel le chômage des jeunes persiste est préoccupant (Tsalack Nonfosso, 2006). Le faible niveau de professionnalisation de la formation est souvent cité comme une cause majeure. L’État, à travers divers discours, reconnaît l'urgence de cette situation et la nécessité de réformer le système éducatif pour l'adapter aux besoins du marché du travail.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 border rounded bg-white">
+          <h4 class="fw-semibold text-secondary">Professionnalisation et Formation</h4>
+          <p>
+            Malgré les efforts pour intégrer l'approche par compétences, le lien entre formation et emploi reste complexe. Certains chercheurs occidentaux estiment même que ce lien est difficile à établir (Tanguy, 1987). L’introduction de nouvelles approches pédagogiques est une étape clé pour mieux aligner les compétences des apprenants avec les exigences du marché de l’emploi.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 border rounded bg-white">
+          <h4 class="fw-semibold text-secondary">Les Enjeux Économiques</h4>
+          <p>
+            Au Cameroun et dans d'autres pays africains, l'incapacité à créer un lien fort entre formation et emploi entrave le développement économique. Les investissements dans les infrastructures universitaires et la recherche scientifique ne suffisent pas toujours à créer une économie de la connaissance, comme l'a montré Younes Bouacida (2018) en Algérie.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 border rounded bg-white">
+          <h4 class="fw-semibold text-secondary">Perspectives pour l'Avenir</h4>
+          <p>
+            Les défis liés à l'adéquation formation-emploi sont complexes et exigent des réformes systémiques. En reliant mieux les enseignements à la réalité professionnelle, les systèmes éducatifs peuvent espérer répondre aux besoins du marché de l'emploi et favoriser une insertion professionnelle efficace et durable pour les diplômés.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- ts speaker start-->
+<!-- Section Comité d'Organisation Start -->
+<section class="ts-committee" style="background-image:url({% static 'gestioncolloque/assets/images/speakers/speaker_bg.png' %})">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">
+                    <span>Comité d'Organisation</span>
+                    Coordination et Comité Scientifique
+                </h2>
+                <p class="lead">Découvrez les experts et les professionnels qui guident l'organisation de ce colloque avec une expertise et une passion pour l'innovation scientifique.</p>
+            </div>
+        </div>
+        <!-- Coordination Section -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h3 class="sub-section-title">Coordination</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="committee-member">
+                            <h4>BAPES BA BAPES Yves Dieudonné</h4>
+                            <p>Coordonnateur</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="committee-member">
+                            <h4>FASSE MBOUYA Innocent</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="committee-member">
+                            <h4>YEMBI John</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="committee-member">
+                            <h4>FONGZOSSIE Evariste</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comité Scientifique Section -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h3 class="sub-section-title">Comité Scientifique</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>FASSE MBOUYA Innocent</h4>
+                            <p>(Université de Douala), Président</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>MVOTO MEYONG Colette</h4>
+                            <p>(Université de Douala)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>DHIANGA Brenda</h4>
+                            <p>(Université de Douala)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>MESSINA NDIBNU Julia</h4>
+                            <p>(Université de Yaoundé I)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>MPOCHE Kisitus</h4>
+                            <p>(Université de Douala)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>MELI MELI Vivien</h4>
+                            <p>(Université de Dschang)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>MBALLA ELANGA Edmond</h4>
+                            <p>(Université de Douala)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>TEDONGMO TEKO Henri</h4>
+                            <p>(Université de Yaoundé I)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>NJOUPOLOGNIGNI Moussa</h4>
+                            <p>(Université de Douala)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>NYET BASILE ODILON</h4>
+                            <p>(Université de Maroua)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>BONKOUNGOU NIKIEMA HAQUA</h4>
+                            <p>(École normale supérieure, Burkina Faso)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>EBOLE Roméal</h4>
+                            <p>(Université de Douala)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="committee-member">
+                            <h4>SANOGO MAMADOU</h4>
+                            <p>(Institut de Formation et de recherche interdisciplinaire en Science de la Santé et de l'Éducation, Burkina Faso)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Comité d'Organisation End -->
+
+<!-- ts speaker end-->
+
+
+
+
+
+{% endblock content %}

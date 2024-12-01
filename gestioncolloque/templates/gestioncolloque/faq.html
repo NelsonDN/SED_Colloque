@@ -1,0 +1,144 @@
+{% extends "gestioncolloque/layouts/app.html" %}
+
+{% block title %}
+FAQ
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+
+<div id="page-banner-area" class="page-banner-area" style="background-image:url({% static 'gestioncolloque/assets/leanr_bg.png' %})">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+       <div class="text-center">
+          <h2>FAQ'S Du Colloque</h2>
+          <ol class="breadcrumb">
+             <li>
+                <a href="#">Accueil /</a>
+             </li>
+             <li>
+                <a href="#">Foire Aux Questions</a>
+             </li>
+          </ol>
+       </div>
+    </div><!-- Subpage title end -->
+ </div><!-- Page Banner end -->
+<!-- Section FAQ Start -->
+<section class="ts-faq-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="faq-content mb-70">
+                    <h2 class="column-title">
+                        Foire aux questions
+                    </h2>
+                    <div class="panel-group faq-item" id="accordion" role="tablist" aria-multiselectable="true">
+
+                        <div class="panel faq-list panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        1. Quand se déroulera le colloque sur l'adéquation formation-emploi ?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Le colloque aura lieu du 23 au 25 octobre 2024 à l'Université de Douala.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel faq-list panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        2. Où se tiendra le colloque ?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Le colloque se tiendra sur le campus de l'Université de Douala, précisément à l'ENSET.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel faq-list panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        3. Comment puis-je m'inscrire au colloque ?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Les inscriptions peuvent se faire en ligne sur le site officiel du colloque. Un lien sera disponible sur notre page d'accueil.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel faq-list panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        4. Quels sujets seront abordés lors du colloque ?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                    Le colloque couvrira divers aspects de l'adéquation formation-emploi, y compris les compétences requises sur le marché du travail, les enjeux de l'éducation, et les meilleures pratiques en matière d'insertion professionnelle.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- panel-group -->
+                </div>
+            </div><!-- col end -->
+
+            <div class="col-lg-4">
+                <div class="sidebar-widgets">
+                    <div class="widget asq-form">
+                        <form action="#" method="POST" class="ts-form">
+                            <input type="text" class="form-control" name="name" placeholder="Votre Nom" id="ts_contact_name">
+                            <input type="email" class="form-control" name="email" placeholder="Votre Email" id="ts_contact_email">
+                            <textarea name="message" placeholder="Votre Question" id="x_contact_massage" class="form-control message-box" cols="30" rows="10"></textarea>
+                            <div class="ts-btn-wraper">
+                                <input type="submit" class="btn" id="ts_contact_submit" value="ENVOYER LA QUESTION">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="widget social-box">
+                        <h4 class="widget-title">Nos services</h4>
+                        <ul>
+                            <li class="ts-facebook">
+                                <a href="#"><i class="fa fa-facebook"></i> </a>
+                            </li>
+                            <li class="ts-whatsapp">
+                                <a href="#"><i class="fa fa-whatsapp"></i></a>
+                            </li>
+                            {% comment %} <li class="ts-google-plus">
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li class="ts-linkedin">
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li class="ts-instagram">
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li class="ts-youtube">
+                                <a href="#"><i class="fa fa-youtube"></i></a>
+                            </li> {% endcomment %}
+                        </ul>
+                    </div><!-- .widget end -->
+                </div>
+            </div><!-- col end -->
+        </div><!-- row end-->
+    </div><!-- .container end -->
+</section><!-- End FAQ section -->
+
+
+{% endblock content %}
